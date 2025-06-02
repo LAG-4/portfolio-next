@@ -3,7 +3,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from './ui/button';
 
 const avatarImagePath = 'images/Hero.png'
-const resumePath = "/resume.pdf"; 
+const resumePath = "/resume.pdf";
 const emailAddress = "aryangupta4feb@gmail.com";
 
 export default function Hero(){
@@ -13,7 +13,7 @@ export default function Hero(){
         {" "}
         {/* Adjusted margin-right */}
         <h1 className="text-4xl font-extrabold mb-8">
-          Building Tomorrow's Tech Today <br />
+          Building Tomorrow&apos;s Tech Today <br /> {/* Fix here */}
           <div className="text-2xl mb-0">
             Full-Stack Developer & AI Enthusiast
           </div>
@@ -44,7 +44,7 @@ export default function Hero(){
             asChild
             className="w-full sm:w-auto flex-1 sm:flex-initial"
           >
-            <a href={`mailto:${emailAddress}`}>Let's Connect</a>
+            <a href={`mailto:${emailAddress}`}>Let&apos;s Connect</a>
           </Button>
         </div>
       </div>
@@ -56,7 +56,7 @@ export default function Hero(){
         <Avatar className="w-[min(40vw,400px)] h-[min(40vw,400px)] lg:w-[400px] lg:h-[400px]">
           <AvatarImage
             src={avatarImagePath}
-            alt="Aryan Gupta's profile picture"
+            alt="Aryan Gupta&apos;s profile picture" // Fix here
           />
           <AvatarFallback>AG</AvatarFallback>
         </Avatar>
