@@ -87,7 +87,6 @@ const projectsData: Project[] = [
     "JPA (Hibernate)",// Backend ORM (implied by @Entity)
     "MySQL",          // Database
     "Google Pay API", // Donations
-    "Lombok",         // Java utility
     "Postman",        // API Testing
     // "SDG Integration" is a feature, not a specific tech
   ],
