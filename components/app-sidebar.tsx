@@ -37,7 +37,7 @@ const items = [
   },
   {
     title: "Experience",
-    url: "#",
+    url: "#experience",
     icon: Briefcase,
   },
     {
