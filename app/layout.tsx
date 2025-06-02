@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
-import { AppSidebar } from "@/components/ui/app-sidebar"
+import { AppSidebar } from "@/components/app-sidebar"
 import { JetBrains_Mono } from 'next/font/google';
+import { ThemeProvider } from "@/components/theme-provider"
+
+
+
 const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
   display: 'swap', // Recommended for better performance and user experience
@@ -19,18 +23,26 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <title>Aryan Gupta</title>
         </head>  
+        
       <body
         className={`${jetbrainsMono.className} ${jetbrainsMono.variable}`}
-      >
+      ><ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
         <SidebarProvider>
         <AppSidebar />
         <SidebarTrigger />
         {children}
         </SidebarProvider>
+        </ThemeProvider>
+      
       </body>
     </html>
   );

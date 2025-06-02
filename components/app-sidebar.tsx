@@ -1,8 +1,9 @@
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react"
+import {Home,Info, Code, Wrench, Mail, Briefcase, Award } from "lucide-react"
 
 import {
   Sidebar,
   SidebarContent,
+  SidebarFooter,
   SidebarGroup,
   SidebarGroupContent,
   SidebarGroupLabel,
@@ -10,6 +11,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
+import { ModeToggle } from "./toggle"
 
 // Menu items.
 const items = [
@@ -19,24 +21,34 @@ const items = [
     icon: Home,
   },
   {
-    title: "Inbox",
+    title: "About",
     url: "#",
-    icon: Inbox,
+    icon: Info,
   },
   {
-    title: "Calendar",
+    title: "Projects",
     url: "#",
-    icon: Calendar,
+    icon: Code,
   },
   {
-    title: "Search",
+    title: "Skills",
     url: "#",
-    icon: Search,
+    icon: Wrench,
   },
   {
-    title: "Settings",
+    title: "Experience",
     url: "#",
-    icon: Settings,
+    icon: Briefcase,
+  },
+    {
+    title: "Awards",
+    url: "#",
+    icon: Award,
+  },
+    {
+    title: "Contact",
+    url: "#",
+    icon: Mail,
   },
 ]
 
@@ -45,7 +57,7 @@ export function AppSidebar() {
     <Sidebar>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Application</SidebarGroupLabel>
+          <SidebarGroupLabel>Aryan Gupta</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {items.map((item) => (
@@ -62,6 +74,9 @@ export function AppSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
+      <SidebarFooter>
+        <ModeToggle></ModeToggle>
+      </SidebarFooter>
     </Sidebar>
   )
 }
