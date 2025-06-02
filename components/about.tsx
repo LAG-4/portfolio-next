@@ -1,291 +1,166 @@
-'use client'
+// app/about/page.jsx (or wherever your About component is)
+'use client';
+
 import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardHeader,
-    CardTitle,
-} from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Separator } from "@/components/ui/separator" // Assuming this is correctly imported from ./ui/separator
-import { Progress } from "@/components/ui/progress"
-import { 
-    Code, 
-    Video, 
-    Palette, 
-    Megaphone, 
-    Rocket, 
-    Brain, 
-    Zap,
-    Target,
-    MapPin,
-    GraduationCap,
-    Sparkles
-} from "lucide-react"
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
+// Optional: Import Lucide icons if you prefer them over emojis
+// import { Rocket, Wrench, Smartphone, Palette, Star } from 'lucide-react';
 
 export default function About() {
-    const capabilities = [
-        {
-            title: "Digital Creator",
-            description: "Video editing, After Effects, Premiere Pro",
-            icon: Video,
-            skills: ["After Effects", "Premiere Pro", "Content Creation"]
-        },
-        {
-            title: "3D Artist",
-            description: "Blender, 3D modeling, visual design",
-            icon: Palette,
-            skills: ["Blender", "3D Modeling", "Visual Design"]
-        },
-        {
-            title: "UI/UX Designer",
-            description: "Figma, Photoshop, user-centered design",
-            icon: Code, // Assuming Code icon is appropriate here, or use a specific design icon
-            skills: ["Figma", "Photoshop", "UI/UX"]
-        },
-        {
-            title: "Content Strategist",
-            description: "Social media, content creation, storytelling",
-            icon: Megaphone,
-            skills: ["Social Media", "Storytelling", "Strategy"]
-        }
-    ]
+  const drivingForceItems = [
+    {
+      icon: "🚀",
+      text: "Obsessed with emerging AI technologies",
+    },
+    {
+      icon: "🛠️",
+      text: "Love turning ideas into functional products",
+    },
+    {
+      icon: "📱",
+      text: "Passionate about mobile-first experiences",
+    },
+    {
+      icon: "🎨",
+      text: "Believe great design makes great products",
+    },
+    {
+      icon: "🌟",
+      text: "Always learning, always building",
+    },
+  ];
 
-    const currentFocus = [
-        {
-            title: "Exploring",
-            description: "LangGraph, Advanced AI Agents",
-            icon: Brain,
-            progress: 75
-        },
-        {
-            title: "Building",
-            description: "Next-gen mobile experiences",
-            icon: Rocket,
-            progress: 60
-        },
-        {
-            title: "Learning",
-            description: "Cloud architecture at scale",
-            icon: Sparkles,
-            progress: 45
-        }
-    ]
+  const creativeSkillsBadges = [
+    { icon: "🎨", text: "Pixel-Perfect UIs" },
+    { icon: "🎬", text: "Cinematic Videos" },
+    { icon: "🧊", text: "3D Modeling" },
+    { icon: "🤖", text: "AI Agents" },
+  ];
 
-    const quickFacts = [
-        {
-            icon: MapPin,
-            label: "Location",
-            value: "Based in India"
-        },
-        {
-            icon: GraduationCap,
-            label: "Education",
-            value: "B.Tech CS at VIT"
-        },
-        {
-            icon: Zap,
-            label: "Superpower",
-            value: "Fast learner, faster shipper"
-        },
-        {
-            icon: Target,
-            label: "Goal",
-            value: "Work at Big Tech"
-        }
-    ]
+  const quickFacts = [
+    { icon: "📍", text: "Based in India" },
+    { icon: "🎓", text: "B.Tech Computer Science at VIT" },
+    { icon: "⚡", text: "Fast learner, faster shipper" },
+    { icon: "🎯", text: "Goal: Work at Big Tech" },
+  ];
 
-    return (
-        // Reduced overall padding, ensure min-h-screen is effective
-        <section id="about" className="w-full min-h-screen snap-start flex flex-col p-4 md:p-8 lg:p-12 xl:p-16">
-            <div className="max-w-6xl mx-auto w-full">
-                
-                {/* Main Title - Reduced bottom margin */}
-                <div className="text-center mb-8 md:mb-10">
-                    {/* Assuming your theme has primary/accent for gradients or use a single primary color */}
-                    <h1 className="text-3xl md:text-4xl font-extrabold mb-3 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                        The Builder Behind the Code
-                    </h1>
-                    <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
-                </div>
+  return (
+    <section
+      id="about"
+      className="w-full min-h-screen snap-start flex flex-col items-center justify-center p-6 md:p-12 lg:p-16 xl:p-24" // Removed bg-gray-950 text-gray-50
+    >
+      <div className="max-w-4xl w-full">
+        <h1 className="text-3xl md:text-4xl font-extrabold mb-10 text-center md:text-left">
+          {/* Removed text-cyan-400. Color will come from theme for h1. */}
+          The Builder Behind the Code
+        </h1>
 
-                {/* About Me & What Drives Me - Reduced bottom margin */}
-                <div className="grid md:grid-cols-2 gap-4 md:gap-6 mb-8 md:mb-10">
-                    <Card className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-card border-border">
-                        <CardHeader className="pb-3"> {/* Reduced padding */}
-                            <CardTitle className="flex items-center gap-2 text-primary text-lg md:text-xl">
-                                <Code className="w-5 h-5" />
-                                About Me
-                            </CardTitle>
-                            <CardDescription className="text-muted-foreground leading-relaxed text-sm md:text-base">
-                                Hey! I&apos;m Aryan, a Computer Science student who turns caffeine into 
-                                code and ideas into reality. When I&apos;m not busy building the next big thing, 
-                                you&apos;ll find me diving deep into the latest AI developments, creating content 
-                                that bridges complex tech with everyday users, or just gaming with the boys. 
-                                I believe in learning fast, shipping faster, and always staying curious about what&apos;s next in tech.
-                            </CardDescription>
-                        </CardHeader>
-                    </Card>
+        {/* Introductory Block */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-12">
+          <Card className="shadow-lg">
+            {/* Removed bg-gray-900/70 border-cyan-500/20. Card will use theme defaults. */}
+            <CardHeader>
+              <CardTitle className="text-xl">
+                {/* Removed text-cyan-300. Title color from theme. */}
+                My Story
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="leading-relaxed">
+                {/* Removed text-gray-300. Paragraph color from theme. */}
+                Hey! I&apos;m Aryan, a Computer Science student who turns
+                caffeine into code and ideas into reality. When I&apos;m not
+                busy building, you&apos;ll find me diving deep into the latest
+                AI developments or creating content that bridges the gap
+                between complex tech and everyday users. Or just gaming with
+                the boys.
+              </p>
+            </CardContent>
+          </Card>
 
-                    <Card className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-card border-border">
-                        <CardHeader className="pb-3"> {/* Reduced padding */}
-                            <CardTitle className="flex items-center gap-2 text-primary text-lg md:text-xl">
-                                <Rocket className="w-5 h-5" />
-                                What Drives Me
-                            </CardTitle>
-                            {/* Reduced padding for CardContent */}
-                            <CardContent className="pt-2 px-0 text-sm md:text-base">
-                                <ul className="space-y-2"> {/* Reduced space-y */}
-                                    <li className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
-                                        <span className="text-lg">🚀</span>
-                                        <span>Obsessed with emerging AI technologies</span>
-                                    </li>
-                                    <li className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
-                                        <span className="text-lg">🛠️</span>
-                                        <span>Love turning ideas into functional products</span>
-                                    </li>
-                                    <li className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
-                                        <span className="text-lg">📱</span>
-                                        <span>Passionate about mobile-first experiences</span>
-                                    </li>
-                                    <li className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
-                                        <span className="text-lg">🎨</span>
-                                        <span>Believe great design makes great products</span>
-                                    </li>
-                                    <li className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
-                                        <span className="text-lg">🌟</span>
-                                        <span>Always learning, always building</span>
-                                    </li>
-                                </ul>
-                            </CardContent>
-                        </CardHeader>
-                    </Card>
-                </div>
-
-                {/* Beyond Code Section - Reduced bottom margin */}
-                <div className="mb-8 md:mb-10">
-                    <h2 className="text-2xl md:text-3xl font-bold mb-1 text-primary">Beyond Code</h2>
-                    <p className="text-muted-foreground mb-6 text-base md:text-lg">
-                        I&apos;m not just a developer - I&apos;m a digital creator who believes in being a Swiss Army knife in the tech world.
+          <Card className="shadow-lg">
+            {/* Removed bg-gray-900/70 border-cyan-500/20. */}
+            <CardHeader>
+              <CardTitle className="text-xl">
+                {/* Removed text-cyan-300. */}
+                My Driving Force
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ul className="space-y-3">
+                {drivingForceItems.map((item, index) => (
+                  <li
+                    key={index}
+                    className="flex items-start gap-3 p-3 transition-colors rounded-lg hover:bg-accent" // Using hover:bg-accent for themed hover
+                  >
+                    <span className="text-xl mt-0.5">{item.icon}</span>
+                    <p className="text-sm leading-snug">
+                      {/* Removed text-gray-300. */}
+                      {item.text}
                     </p>
-                    
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-                        {capabilities.map((capability, index) => {
-                            const IconComponent = capability.icon;
-                            return (
-                                <Card 
-                                    key={index} 
-                                    className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-card border-border overflow-hidden"
-                                >
-                                    <CardHeader className="text-center pb-2 pt-4"> {/* Adjusted padding */}
-                                        <div className="mx-auto mb-3 p-2 bg-primary/10 rounded-full w-fit group-hover:scale-110 transition-transform duration-300">
-                                            <IconComponent className="w-6 h-6 md:w-7 md:h-7 text-primary" />
-                                        </div>
-                                        <CardTitle className="text-md md:text-lg text-primary group-hover:text-accent-foreground transition-colors">
-                                            {capability.title}
-                                        </CardTitle>
-                                        <CardDescription className="text-muted-foreground text-xs md:text-sm">
-                                            {capability.description}
-                                        </CardDescription>
-                                    </CardHeader>
-                                    <CardContent className="pt-0 pb-3"> {/* Adjusted padding */}
-                                        <div className="flex flex-wrap gap-1 justify-center">
-                                            {capability.skills.map((skill, skillIndex) => (
-                                                <Badge 
-                                                    key={skillIndex} 
-                                                    variant="outline" 
-                                                    className="text-xs border-primary/30 text-primary hover:bg-primary/10"
-                                                >
-                                                    {skill}
-                                                </Badge>
-                                            ))}
-                                        </div>
-                                    </CardContent>
-                                </Card>
-                            );
-                        })}
-                    </div>
-                </div>
+                  </li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+        </div>
 
-                {/* Current Focus Section - Reduced bottom margin */}
-                <div className="mb-8 md:mb-10">
-                    <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary">Currently Focused On</h2>
-                    
-                    <div className="grid md:grid-cols-3 gap-4 md:gap-6">
-                        {currentFocus.map((focus, index) => {
-                            const IconComponent = focus.icon;
-                            return (
-                                <Card 
-                                    key={index} 
-                                    className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-card border-border"
-                                >
-                                    <CardHeader className="pb-2 pt-4"> {/* Adjusted padding */}
-                                        <CardTitle className="flex items-center gap-2 text-primary text-md md:text-lg">
-                                            <IconComponent className="w-5 h-5" />
-                                            {focus.title}
-                                        </CardTitle>
-                                        <CardDescription className="text-muted-foreground text-sm md:text-base">
-                                            {focus.description}
-                                        </CardDescription>
-                                    </CardHeader>
-                                    <CardContent className="pb-4"> {/* Adjusted padding */}
-                                        <div className="space-y-1"> {/* Reduced space-y */}
-                                            <div className="flex justify-between text-xs md:text-sm">
-                                                <span className="text-muted-foreground">Progress</span>
-                                                <span className="text-primary">{focus.progress}%</span>
-                                            </div>
-                                            <Progress 
-                                                value={focus.progress} 
-                                                className="h-1.5 bg-secondary" // Use theme's secondary for progress track
-                                            />
-                                        </div>
-                                    </CardContent>
-                                </Card>
-                            );
-                        })}
-                    </div>
-                </div>
+        {/* More Than Just Code Section */}
+        <div className="mb-12">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">
+            {/* Removed text-cyan-400. */}
+            More Than Just Code
+          </h2>
+          <p className="text-lg mb-6 leading-relaxed">
+            {/* Removed text-gray-300. */}
+            I am not just a developer - I am a digital creator. From crafting
+            pixel-perfect UIs to editing cinematic videos, from designing 3D
+            models to building AI agents, I believe in being a Swiss Army
+            knife in the tech world.
+          </p>
+          <div className="flex flex-wrap gap-3 justify-start">
+            {creativeSkillsBadges.map((skill, index) => (
+              <Badge
+                key={index}
+                variant="outline" // Outline variant will use theme colors for border and text
+                className="text-sm px-3 py-1.5 transition-colors hover:bg-accent" // Using hover:bg-accent
+              >
+                {/* Removed border-cyan-500/50 text-cyan-300 */}
+                <span className="mr-1.5">{skill.icon}</span>
+                {skill.text}
+              </Badge>
+            ))}
+          </div>
+        </div>
 
-                <Separator className="mb-6 md:mb-8 bg-border" />
-
-                {/* Quick Facts */}
-                <div>
-                    <h2 className="text-xl md:text-2xl font-bold mb-4 text-primary">Quick Facts</h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
-                        {quickFacts.map((fact, index) => {
-                            const IconComponent = fact.icon;
-                            return (
-                                <Card 
-                                    key={index} 
-                                    className="group hover:shadow-md transition-all duration-300 hover:-translate-y-0.5 bg-card border-border"
-                                >
-                                    <CardContent className="p-3 text-center"> {/* Reduced padding */}
-                                        <div className="mx-auto mb-2 p-1.5 bg-primary/10 rounded-full w-fit group-hover:scale-110 transition-transform duration-300">
-                                            <IconComponent className="w-4 h-4 md:w-5 md:h-5 text-primary" />
-                                        </div>
-                                        <div className="text-xs text-muted-foreground uppercase tracking-wider mb-0.5">
-                                            {fact.label}
-                                        </div>
-                                        <div className="text-sm font-medium text-card-foreground group-hover:text-primary transition-colors">
-                                            {fact.value}
-                                        </div>
-                                    </CardContent>
-                                </Card>
-                            );
-                        })}
-                    </div>
-                </div>
-
-                {/* Floating Tech Stack Visualization - Using theme colors */}
-                <div className="fixed top-20 right-8 hidden xl:block opacity-[0.07] pointer-events-none">
-                    <div className="relative w-32 h-32">
-                        <div className="absolute top-0 left-0 w-8 h-8 bg-primary rounded-full animate-pulse"></div>
-                        <div className="absolute top-4 right-0 w-6 h-6 bg-accent rounded-full animate-pulse animation-delay-200"></div>
-                        <div className="absolute bottom-0 left-4 w-7 h-7 bg-secondary rounded-full animate-pulse animation-delay-400"></div>
-                        <div className="absolute bottom-4 right-4 w-5 h-5 bg-primary/50 rounded-full animate-pulse animation-delay-600"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
+        {/* Quick Facts Section */}
+        <div>
+          <Separator className="my-8" /> {/* Removed border-gray-700. Separator uses theme. */}
+          <h3 className="text-xl font-semibold mb-5 text-center md:text-left">
+            {/* Removed text-gray-400. */}
+            At a Glance
+          </h3>
+          <div className="flex flex-wrap justify-center md:justify-start gap-3">
+            {quickFacts.map((fact, index) => (
+              <Badge
+                key={index}
+                variant="secondary" // Secondary variant will use theme colors
+                className="text-sm px-4 py-2 transition-colors cursor-default hover:bg-accent" // Using hover:bg-accent
+              >
+                {/* Removed bg-cyan-500/10 text-cyan-300 hover:bg-cyan-500/20 */}
+                <span className="mr-1.5">{fact.icon}</span>
+                {fact.text}
+              </Badge>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
