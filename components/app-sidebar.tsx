@@ -17,7 +17,7 @@ import { ModeToggle } from "./toggle"
 const items = [
   {
     title: "Home",
-    url: "/#home",
+    url: "#home",
     icon: Home,
   },
   {
@@ -27,7 +27,7 @@ const items = [
   },
   {
     title: "Projects",
-    url: "#",
+    url: "#projects",
     icon: Code,
   },
   {
