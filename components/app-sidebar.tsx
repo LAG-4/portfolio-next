@@ -17,12 +17,12 @@ import { ModeToggle } from "./toggle"
 const items = [
   {
     title: "Home",
-    url: "#",
+    url: "/#home",
     icon: Home,
   },
   {
     title: "About",
-    url: "#",
+    url: "#about",
     icon: Info,
   },
   {
