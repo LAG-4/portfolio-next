@@ -42,12 +42,12 @@ const items = [
   },
     {
     title: "Awards",
-    url: "#",
+    url: "#award",
     icon: Award,
   },
     {
     title: "Contact",
-    url: "#",
+    url: "#contact",
     icon: Mail,
   },
 ]

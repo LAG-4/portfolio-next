@@ -1,6 +1,7 @@
 'use client'
 
 import About from "@/components/about";
+import Award from "@/components/awards";
 import Experience from "@/components/experience";
 import Hero from "@/components/hero";
 import Poroject from "@/components/projects";
@@ -14,6 +15,7 @@ export default function Home() {
       <Poroject/>
       <Skills/>
       <Experience/>
+      <Award/>
     </main>
   );
 }
