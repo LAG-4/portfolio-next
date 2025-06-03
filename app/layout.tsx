@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
+import { AppSidebar } from "@/components/app-sidebar"
 import { JetBrains_Mono } from 'next/font/google';
 import { ThemeProvider } from "@/components/theme-provider"
 
@@ -34,7 +36,11 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
+        <SidebarProvider>
+        <AppSidebar />
+        <SidebarTrigger />
         {children}
+        </SidebarProvider>
         </ThemeProvider>
       
       </body>
