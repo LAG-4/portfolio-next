@@ -188,3 +188,13 @@
     letter-spacing: var(--tracking-normal);
   }
 }
+
+::-moz-selection {
+  background: #db2777;
+}
+::-webkit-selection {
+  background: #db2777;
+}
+::selection {
+  background: #db2777;
+}
