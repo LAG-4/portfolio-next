@@ -6,7 +6,7 @@ import Experience from "@/components/experience";
 import Hero from "@/components/hero";
 import Poroject from "@/components/projects";
 import Skills from "@/components/skills";
-
+import Contact from "@/components/contact"
 export default function Home() {
   return (
     <main className="h-screen overflow-y-scroll snap-y snap-mandatory">
@@ -16,6 +16,7 @@ export default function Home() {
       <Skills/>
       <Experience/>
       <Award/>
+      <Contact/>
     </main>
   );
 }
