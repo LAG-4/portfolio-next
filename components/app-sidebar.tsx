@@ -1,4 +1,4 @@
-import {Home,Info, Code, Wrench, Mail, Briefcase, Award } from "lucide-react"
+import {Home,Info, Code, Wrench, Mail, Briefcase, Award, File } from "lucide-react"
 
 import {
   Sidebar,
@@ -49,6 +49,11 @@ const items = [
     title: "Contact",
     url: "#contact",
     icon: Mail,
+  },
+      {
+    title: "Blogs",
+    url: "https://blog.lagaryan.click/",
+    icon: File,
   },
 ]
 
