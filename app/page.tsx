@@ -1,5 +1,5 @@
 'use client'
-
+import { useEffect } from "react";
 import About from "@/components/about";
 import Award from "@/components/awards";
 import Experience from "@/components/experience";
@@ -10,6 +10,22 @@ import Contact from "@/components/contact";
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
+   useEffect(() => {
+    // On mount, check for pending hash and scroll
+    if (typeof window !== "undefined") {
+      const pending = window.localStorage.getItem("pendingHash");
+      if (pending) {
+        const el = document.getElementById(pending);
+        if (el) {
+          setTimeout(() => {
+            el.scrollIntoView({ behavior: "smooth" });
+            window.localStorage.removeItem("pendingHash");
+          }, 100); // Delay to ensure DOM is ready
+        }
+      }
+    }
+  }, []);
+
   return (
     <main className="h-screen overflow-y-scroll snap-y snap-mandatory">
       <Button

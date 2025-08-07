@@ -1,5 +1,5 @@
-import {Home,Info, Code, Wrench, Mail, Briefcase, Award, File } from "lucide-react"
-
+"use client";
+import { Home, Info, Code, Wrench, Mail, Briefcase, Award, File } from "lucide-react";
 import {
   Sidebar,
   SidebarContent,
@@ -10,54 +10,24 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@/components/ui/sidebar"
-import { ModeToggle } from "./toggle"
+} from "@/components/ui/sidebar";
+import { ModeToggle } from "./toggle";
+import { useHashScroll } from "@/components/hashScroll"; // <-- import
 
-// Menu items.
 const items = [
-  {
-    title: "Home",
-    url: "#home",
-    icon: Home,
-  },
-  {
-    title: "About",
-    url: "#about",
-    icon: Info,
-  },
-  {
-    title: "Projects",
-    url: "#projects",
-    icon: Code,
-  },
-  {
-    title: "Skills",
-    url: "#skills",
-    icon: Wrench,
-  },
-  {
-    title: "Experience",
-    url: "#experience",
-    icon: Briefcase,
-  },
-    {
-    title: "Awards",
-    url: "#award",
-    icon: Award,
-  },
-    {
-    title: "Contact",
-    url: "#contact",
-    icon: Mail,
-  },
-      {
-    title: "Blogs",
-    url: "https://blog.lagaryan.click/",
-    icon: File,
-  },
-]
+  { title: "Home", url: "/", icon: Home },
+  { title: "About", url: "/#about", icon: Info },
+  { title: "Projects", url: "/#projects", icon: Code },
+  { title: "Skills", url: "/#skills", icon: Wrench },
+  { title: "Experience", url: "/#experience", icon: Briefcase },
+  { title: "Awards", url: "/#award", icon: Award },
+  { title: "Contact", url: "/#contact", icon: Mail },
+  { title: "Blogs", url: "https://blog.lagaryan.click/", icon: File },
+];
 
 export function AppSidebar() {
+  const handleHashNavigation = useHashScroll();
+
   return (
     <Sidebar>
       <SidebarContent>
@@ -68,10 +38,14 @@ export function AppSidebar() {
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
-                    <a href={item.url}>
+                    <button
+                      type="button"
+                      onClick={() => handleHashNavigation(item.url)}
+                      className="flex items-center gap-2 w-full"
+                    >
                       <item.icon />
                       <span>{item.title}</span>
-                    </a>
+                    </button>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
@@ -80,8 +54,8 @@ export function AppSidebar() {
         </SidebarGroup>
       </SidebarContent>
       <SidebarFooter>
-        <ModeToggle></ModeToggle>
+        <ModeToggle />
       </SidebarFooter>
     </Sidebar>
-  )
+  );
 }
