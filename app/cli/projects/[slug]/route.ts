@@ -1,5 +1,4 @@
 import { ansi, link } from '@/lib/ansi';
-import type { NextRequest } from 'next/server';
 
 export const runtime = 'nodejs';
 
@@ -31,9 +30,11 @@ const PROJECTS: Record<string, { name: string; desc: string; url: string } > = {
   },
 };
 
-export async function GET(req: NextRequest, ctx: { params: { slug: string } }) {
+export async function GET(req: Request) {
   const { bold, reset, dim, cyan } = ansi;
-  const slug = ctx.params.slug;
+  const { pathname } = new URL(req.url);
+  const parts = pathname.split('/').filter(Boolean);
+  const slug = parts[parts.length - 1];
   const p = PROJECTS[slug];
   if (!p) {
     const lines = [

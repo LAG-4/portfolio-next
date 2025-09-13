@@ -1,4 +1,4 @@
-import { ansi, link } from '@/lib/ansi';
+import { ansi } from '@/lib/ansi';
 
 export const runtime = 'nodejs';
 
