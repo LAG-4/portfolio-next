@@ -1,0 +1,8 @@
+[1m[36mProjects[0m
+
+-  ]8;;https://lagaryan.click/projects/resume-optimizerAI Resume Optimizer]8;;
+-  ]8;;https://lagaryan.click/projects/thread-generatorTweet Thread Generator]8;;
+-  ]8;;https://lagaryan.click/projects/n8n-automationsN8N Social Automations]8;;
+
+[2mTip: visit the website for screenshots and demos.[0m
+

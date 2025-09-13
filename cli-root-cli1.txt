@@ -1,0 +1,18 @@
+[1m[36m
+ __        __   _                            _
+ \ \      / /__| | ___ ___  _ __ ___   ___  | |_ ___
+  \ \ /\ / / _ \ |/ __/ _ \| '_ ` _ \ / _ \ | __/ _ \
+   \ V  V /  __/ | (_| (_) | | | | | |  __/ | || (_) |
+    \_/\_/ \___|_|\___\___/|_| |_| |_|\___|  \__\___/
+[0m
+
+[1mHi — this is the CLI view of lagaryan.click[0m
+
+[1mAbout:[0m Full-stack developer building AI & automation tools.
+[1mProjects:[0m ]8;;https://lagaryan.click/projectsSee highlights]8;;  |  [36m/cli/projects[0m
+[1mContact:[0m ]8;;mailto:hello@lagaryan.clickEmail]8;;  |  [35m/cli/contact[0m
+
+[32mLinks:[0m ]8;;https://lagaryan.clickWebsite]8;;  -   ]8;;https://github.com/<your-gh>GitHub]8;;  -   ]8;;https://x.com/<your-handle>X]8;;
+
+[2mTip: open in a modern terminal (iTerm2, WezTerm, etc.) for clickable links.[0m
+

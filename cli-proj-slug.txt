@@ -1,0 +1,7 @@
+[1mAI Resume Optimizer[0m
+
+Analyze a resume against a JD, extract gaps, and generate tailored improvements.
+
+More: ]8;;https://lagaryan.click/projects/resume-optimizerhttps://lagaryan.click/projects/resume-optimizer]8;;
+[2mTip: use a modern terminal for clickable links.[0m
+
