@@ -62,12 +62,12 @@ function body() {
 
   const legend = [
     `${bold}${underline}Legend${reset}`,
-    `${green}$ curl${reset} ${dim}lagaryan.click${reset}             ${dim}Get this page${reset}`,
-    `${green}$ curl${reset} ${dim}lagaryan.click/cli/projects${reset}    ${dim}Projects list${reset}`,
-    `${green}$ curl${reset} ${dim}lagaryan.click/cli/awards${reset}     ${dim}Awards & comps${reset}`,
-    `${green}$ curl${reset} ${dim}lagaryan.click/cli/skills${reset}      ${dim}Skills & certs${reset}`,
-    `${green}$ curl${reset} ${dim}lagaryan.click/cli/experience${reset}  ${dim}Work summary${reset}`,
-    `${green}$ curl${reset} ${dim}lagaryan.click/cli/homelab${reset}     ${dim}Homelab/DevOps${reset}`,
+    `${green}$ curl -L${reset} ${dim}lagaryan.click${reset}             ${dim}Get this page${reset}`,
+    `${green}$ curl -L${reset} ${dim}lagaryan.click/cli/projects${reset}    ${dim}Projects list${reset}`,
+    `${green}$ curl -L${reset} ${dim}lagaryan.click/cli/awards${reset}     ${dim}Awards & comps${reset}`,
+    `${green}$ curl -L${reset} ${dim}lagaryan.click/cli/skills${reset}      ${dim}Skills & certs${reset}`,
+    `${green}$ curl -L${reset} ${dim}lagaryan.click/cli/experience${reset}  ${dim}Work summary${reset}`,
+    `${green}$ curl -L${reset} ${dim}lagaryan.click/cli/homelab${reset}     ${dim}Homelab/DevOps${reset}`,
   ].join('\n');
 
   return [
