@@ -6,6 +6,7 @@ import './linktree.css';
 export default function LinktreePage() {
   useEffect(() => {
     // Split text animation logic
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const segmenter = new (Intl as any).Segmenter({
       granularity: "letter",
     });
@@ -16,6 +17,7 @@ export default function LinktreePage() {
 
       const wrappedLetters = letters
         .map(
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           (letter: any, index: number) => `<span data-char="${letter.segment}" style="transition-delay: ${index * 0.05}s">${letter.segment}</span>`
         )
         .join("");
@@ -26,6 +28,17 @@ export default function LinktreePage() {
     const els = document.querySelectorAll(".animated-link");
     els.forEach((el) => {
       spanWrap(el as HTMLElement);
+
+      // Add touch support for mobile
+      el.addEventListener('touchstart', () => {
+        el.classList.add('active');
+      });
+
+      el.addEventListener('touchend', () => {
+        setTimeout(() => {
+          el.classList.remove('active');
+        }, 300);
+      });
     });
   }, []);
 

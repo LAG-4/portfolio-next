@@ -58,6 +58,8 @@
 }
 
 .animated-link:hover span::before,
-.animated-link:hover span::after {
+.animated-link:hover span::after,
+.animated-link.active span::before,
+.animated-link.active span::after {
   transform: translateY(-100%);
 }
