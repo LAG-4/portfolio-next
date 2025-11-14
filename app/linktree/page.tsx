@@ -33,22 +33,17 @@ export default function LinktreePage() {
     <div className="linktree-container">
       <div className="linktree-content">
         <div className="links-grid">
-          <a href="https://tiktok.com" className="animated-link" target="_blank" rel="noopener noreferrer">
-            TikTok
-          </a>
-          <a href="https://instagram.com" className="animated-link" target="_blank" rel="noopener noreferrer">
+          
+          <a href="https://instagram.com/lag_aryan" className="animated-link" target="_blank" rel="noopener noreferrer">
             Instagram
           </a>
-          <a href="https://youtube.com" className="animated-link" target="_blank" rel="noopener noreferrer">
+          <a href="https://youtube.com/@lag_aryan4" className="animated-link" target="_blank" rel="noopener noreferrer">
             YouTube
           </a>
-          <a href="https://twitch.tv" className="animated-link" target="_blank" rel="noopener noreferrer">
-            Twitch
-          </a>
-          <a href="https://github.com" className="animated-link" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/lag-4" className="animated-link" target="_blank" rel="noopener noreferrer">
             GitHub
           </a>
-          <a href="https://twitter.com" className="animated-link" target="_blank" rel="noopener noreferrer">
+          <a href="https://x.com/lag_aryan" className="animated-link" target="_blank" rel="noopener noreferrer">
             Twitter
           </a>
         </div>
