@@ -10,7 +10,7 @@ import Contact from "@/components/contact";
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
-   useEffect(() => {
+  useEffect(() => {
     // On mount, check for pending hash and scroll
     if (typeof window !== "undefined") {
       const pending = window.localStorage.getItem("pendingHash");
@@ -27,7 +27,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="h-screen overflow-y-scroll snap-y snap-mandatory">
+    <main className="min-h-screen flex flex-col">
       <Button
         className="fixed top-4 right-4 z-50"
         onClick={() => {
