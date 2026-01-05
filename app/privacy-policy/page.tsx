@@ -13,12 +13,12 @@ export default function PrivacyPolicyPage() {
             </h1>
 
             <p className="text-muted-foreground text-sm mb-8">
-                <strong className="text-foreground">Last updated: January 05, 2026</strong>
+                <strong className="text-foreground">Last updated: January 06, 2026</strong>
             </p>
 
             <section className="space-y-6 text-muted-foreground leading-7">
                 <p>
-                    I built the LearnAI app as a Free app. This SERVICE is provided at no cost and is intended for use as is.
+                    I built the LearnAI app as a Free app. This SERVICE is provided at no cost and is intended for use test.
                 </p>
                 <p>
                     This page is used to inform visitors regarding our policies with the
@@ -37,16 +37,18 @@ export default function PrivacyPolicyPage() {
                     Information Collection and Use
                 </h2>
                 <p>
-                    For a better experience, while using our Service, we may require you to
-                    provide us with certain personally identifiable information. The
-                    information that we request will be retained on your device and is not
-                    collected by us in any way.
+                    For a better experience, while using our Service, the app utilizes third-party 
+                    services that collect information used to identify you and analyze app usage. 
+                    This includes:
                 </p>
-                <p>
-                    The app does use third-party services that may collect information used
-                    to identify you.
-                </p>
-                <p>
+                <ul className="list-disc pl-6 space-y-2">
+                    <li><strong>Approximate Location:</strong> Derived from IP addresses to understand regional usage.</li>
+                    <li><strong>App Activity:</strong> Tracking interactions such as screens viewed and buttons clicked.</li>
+                    <li><strong>Diagnostics:</strong> Collection of error logs and performance data to improve stability.</li>
+                    <li><strong>Device IDs:</strong> Unique identifiers used to distinguish users and sessions.</li>
+                </ul>
+                
+                <p className="mt-4">
                     Link to the privacy policy of third-party service providers used by the
                     app:
                 </p>
@@ -72,6 +74,18 @@ export default function PrivacyPolicyPage() {
                         </a>
                     </li>
                 </ul>
+
+                <h2 className="text-2xl font-semibold text-foreground mt-10 mb-4">
+                    Data Deletion Request
+                </h2>
+                <p>
+                    We provide a way for users to request that their collected data is deleted. Since the app 
+                    does not use accounts, this data is primarily linked to your device ID. If you wish to 
+                    request the deletion of your analytics data, please contact us at:
+                </p>
+                <p className="font-medium text-foreground">
+                    aryan@lagaryan.click
+                </p>
 
                 <h2 className="text-2xl font-semibold text-foreground mt-10 mb-4">
                     Log Data
@@ -100,35 +114,25 @@ export default function PrivacyPolicyPage() {
                     may use third-party code and libraries that use “cookies” to collect
                     information and improve their services. You have the option to either
                     accept or refuse these cookies and know when a cookie is being sent to
-                    your device. If you choose to refuse our cookies, you may not be able to
-                    use some portions of this Service.
+                    your device.
                 </p>
 
                 <h2 className="text-2xl font-semibold text-foreground mt-10 mb-4">
                     Service Providers
                 </h2>
                 <p>
-                    We may employ third-party companies and individuals due to the following
-                    reasons:
-                </p>
-                <ul className="list-disc pl-6 space-y-2">
-                    <li>To facilitate our Service;</li>
-                    <li>To provide the Service on our behalf;</li>
-                    <li>To perform Service-related services; or</li>
-                    <li>To assist us in analyzing how our Service is used.</li>
-                </ul>
-                <p>
-                    We want to inform users of this Service that these third parties have
-                    access to your Personal Information. The reason is to perform the tasks
-                    assigned to them on our behalf. However, they are obligated not to
-                    disclose or use the information for any other purpose.
+                    We may employ third-party companies and individuals to facilitate our 
+                    Service, perform service-related tasks, or assist us in analyzing how 
+                    our Service is used. These third parties have access to the information 
+                    mentioned above only to perform these tasks on our behalf and are 
+                    obligated not to disclose or use it for any other purpose.
                 </p>
 
                 <h2 className="text-2xl font-semibold text-foreground mt-10 mb-4">
                     Security
                 </h2>
                 <p>
-                    We value your trust in providing us your Personal Information, thus we
+                    We value your trust in providing us your information, thus we
                     are striving to use commercially acceptable means of protecting it. But
                     remember that no method of transmission over the internet, or method of
                     electronic storage is 100% secure and reliable, and we cannot guarantee
@@ -142,9 +146,7 @@ export default function PrivacyPolicyPage() {
                     This Service may contain links to other sites. If you click on a
                     third-party link, you will be directed to that site. Note that these
                     external sites are not operated by us. Therefore, we strongly advise you
-                    to review the Privacy Policy of these websites. We have no control over
-                    and assume no responsibility for the content, privacy policies, or
-                    practices of any third-party sites or services.
+                    to review the Privacy Policy of these websites.
                 </p>
 
                 <h2 className="text-2xl font-semibold text-foreground mt-10 mb-4">
@@ -153,11 +155,7 @@ export default function PrivacyPolicyPage() {
                 <p>
                     These Services do not address anyone under the age of 13. We do not
                     knowingly collect personally identifiable information from children
-                    under 13. In the case we discover that a child under 13 has provided us
-                    with personal information, we immediately delete this from our servers.
-                    If you are a parent or guardian and you are aware that your child has
-                    provided us with personal information, please contact us so that we will
-                    be able to do the necessary actions.
+                    under 13.
                 </p>
 
                 <h2 className="text-2xl font-semibold text-foreground mt-10 mb-4">
@@ -168,14 +166,14 @@ export default function PrivacyPolicyPage() {
                     advised to review this page periodically for any changes. We will notify
                     you of any changes by posting the new Privacy Policy on this page.
                 </p>
-                <p>This policy is effective as of 2026-01-05</p>
+                <p>This policy is effective as of 2026-01-06</p>
 
                 <h2 className="text-2xl font-semibold text-foreground mt-10 mb-4">
                     Contact Us
                 </h2>
                 <p>
                     If you have any questions or suggestions about our Privacy Policy, do
-                    not hesitate to contact us.
+                    not hesitate to contact us at aryan@lagaryan.click.
                 </p>
             </section>
         </div>
