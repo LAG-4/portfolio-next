@@ -7,6 +7,7 @@ import Hero from "@/components/hero";
 import Poroject from "@/components/projects";
 import Skills from "@/components/skills";
 import Contact from "@/components/contact";
+import CliShowcase from "@/components/cli-showcase";
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
@@ -37,6 +38,7 @@ export default function Home() {
         Read My Blogs
       </Button>
       <Hero />
+      <CliShowcase />
       <About />
       <Poroject />
       <Skills />

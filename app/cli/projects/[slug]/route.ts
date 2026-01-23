@@ -3,6 +3,11 @@ import { ansi, link } from '@/lib/ansi';
 export const runtime = 'nodejs';
 
 const PROJECTS: Record<string, { name: string; desc: string; url: string } > = {
+  'learnai': {
+    name: 'LearnAI',
+    desc: 'Flutter app to master AI concepts with structured learning and real-time industry updates; deployed on Google Play Store.',
+    url: 'https://play.google.com/store/apps/details?id=com.lagaryan.learnai',
+  },
   'mental-health-app': {
     name: 'Mental Health & Welfare App',
     desc: 'Campus-wide mental health platform with real-time monitoring; 5,000+ users; AI models for early distress detection.',

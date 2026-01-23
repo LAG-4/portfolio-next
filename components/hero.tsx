@@ -25,6 +25,7 @@ export default function Hero() {
             <li>National Hackathon Winner</li>
             <li>10+ Projects Shipped</li>
             <li>Full Stack & AI/ML Expert</li>
+            <li>Active <a href="https://github.com/anomalyco/opencode" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">OpenCode</a> Contributor</li>
           </ul>
         </div>
         <div className="mt-4 flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0 justify-center md:justify-start">

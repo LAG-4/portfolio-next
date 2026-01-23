@@ -25,6 +25,7 @@ export default function About() {
     { icon: "📍", text: "Based in India" },
     { icon: "🎓", text: "B.Tech Computer Science at VIT" },
     { icon: "⚡", text: "Fast learner, faster shipper" },
+    { icon: "🌟", text: "Active OpenCode Contributor" },
   ];
 
   return (

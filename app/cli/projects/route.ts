@@ -5,6 +5,7 @@ export const runtime = 'nodejs';
 export async function GET() {
   const { bold, reset, cyan, dim } = ansi;
   const items = [
+    { name: "LearnAI (Play Store App)", url: 'https://play.google.com/store/apps/details?id=com.lagaryan.learnai' },
     { name: "Mental Health & Welfare App", url: 'https://www.lagaryan.click#projects' },
     { name: "Gaia's Touch (NGO platform)", url: 'https://www.lagaryan.click#projects' },
     { name: 'SheSafe (Campus safety)', url: 'https://www.lagaryan.click#projects' },

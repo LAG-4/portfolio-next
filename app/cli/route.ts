@@ -49,6 +49,7 @@ function body() {
     `• ${bold}Winner, Smart India Hackathon 2023${reset}`,
     `• Top 5/Top 10 finishes across multiple hackathons`,
     `• COO (ex), scaled product to ${bold}15K+ users${reset}`,
+    `• Active contributor to ${link('OpenCode', 'https://github.com/anomalyco/opencode')}`,
     `• Homelab: Jellyfin, Immich, n8n on Raspberry Pi with Tailscale`,
   ].join('\n');
 
