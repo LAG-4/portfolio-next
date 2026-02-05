@@ -1,8 +1,7 @@
-// app/experience/page.tsx (or wherever your Experience component is)
+// app/experience/page.tsx
 'use client';
 
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { motion } from 'motion/react';
 import Link from 'next/link';
 import { ArrowUpRight } from "lucide-react";
 
@@ -38,57 +37,95 @@ export default function Experience() {
       id="experience"
       className="w-full py-20 md:py-32"
     >
-      <div className="container mx-auto px-4 md:px-6 max-w-4xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-16 text-left tracking-tight">
-          Work Experience
-        </h2>
+      <div className="container mx-auto px-6 md:px-12 max-w-4xl">
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-12"
+        >
+          <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-3">
+            Career Journey
+          </p>
+          <h2 className="text-3xl md:text-4xl font-bold">
+            Professional Experience
+          </h2>
+        </motion.div>
 
-        <div className="space-y-12 md:space-y-16">
+        {/* Noir Divider */}
+        <div className="noir-divider">
+          <span className="w-2 h-2 bg-accent rounded-full" />
+        </div>
+
+        {/* Experience Timeline */}
+        <div className="space-y-12">
           {experiences.map((exp, index) => (
-            <div key={index} className="relative">
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="relative pl-8 border-l-2 border-accent"
+            >
+              {/* Timeline dot */}
+              <div className="absolute -left-[9px] top-0 w-4 h-4 bg-accent rounded-full" />
+
+              {/* Header */}
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
                 <div>
-                  <h3 className="text-xl md:text-2xl font-semibold leading-none">
+                  <h3 className="text-xl md:text-2xl font-bold text-foreground">
                     {exp.role}
                   </h3>
-                  <p className="text-lg text-muted-foreground mt-1">
+                  <p className="text-accent mt-1">
                     {exp.company}
                   </p>
                 </div>
-                <span className="text-sm font-medium text-muted-foreground bg-secondary/50 px-3 py-1 rounded-full w-fit">
+                <span className="text-sm text-muted-foreground bg-muted px-3 py-1 w-fit">
                   {exp.duration}
                 </span>
               </div>
 
-              <div className="space-y-4">
-                <ul className="list-disc list-outside ml-4 space-y-2 text-muted-foreground">
-                  {exp.description.map((item, i) => (
-                    <li key={i} className="leading-relaxed">
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+              {/* Description */}
+              <ul className="space-y-2 mb-4">
+                {exp.description.map((item, i) => (
+                  <li 
+                    key={i} 
+                    className="flex items-start gap-3 text-foreground/70 text-sm"
+                  >
+                    <span className="text-muted-foreground mt-1">—</span>
+                    <span className="leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
 
-                <div className="flex flex-wrap gap-2 pt-2">
-                  {exp.technologies.map((tech, i) => (
-                    <Badge key={i} variant="outline" className="text-xs font-normal">
-                      {tech}
-                    </Badge>
-                  ))}
-                </div>
-
-                {exp.projectLink && (
-                  <div className="pt-2">
-                    <Button asChild variant="link" className="p-0 h-auto font-medium text-primary hover:no-underline group">
-                      <Link href={exp.projectLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
-                        {exp.projectLinkText || "View Project"}
-                        <ArrowUpRight className="w-3 h-3 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-                      </Link>
-                    </Button>
-                  </div>
-                )}
+              {/* Technologies */}
+              <div className="flex flex-wrap gap-2 mb-4">
+                {exp.technologies.map((tech, i) => (
+                  <span 
+                    key={i} 
+                    className="px-2 py-1 bg-muted text-muted-foreground text-xs"
+                  >
+                    {tech}
+                  </span>
+                ))}
               </div>
-            </div>
+
+              {/* Project Link */}
+              {exp.projectLink && (
+                <Link 
+                  href={exp.projectLink} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="inline-flex items-center gap-1 text-sm text-accent hover:underline group"
+                >
+                  {exp.projectLinkText || "View Project"}
+                  <ArrowUpRight className="w-3 h-3 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                </Link>
+              )}
+            </motion.div>
           ))}
         </div>
       </div>
