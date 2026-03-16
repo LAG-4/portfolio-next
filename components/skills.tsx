@@ -1,14 +1,7 @@
-// app/skills/page.tsx (or wherever your Skills component is)
+// app/skills/page.tsx
 'use client';
 
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import { Badge } from "@/components/ui/badge";
-import { Progress } from "@/components/ui/progress";
+import { motion } from 'motion/react';
 
 interface SkillItem {
   name: string;
@@ -46,62 +39,117 @@ const skillsData: SkillsData = {
   ],
 };
 
-const formatCategoryName = (key: string): string => {
-  switch (key) {
-    case 'aiDataScience': return 'AI & Data Science';
-    case 'toolsPlatforms': return 'Tools & Platforms';
-    default: return key.charAt(0).toUpperCase() + key.slice(1);
-  }
+const categoryConfig = {
+  development: { label: "Development", icon: "01" },
+  aiDataScience: { label: "AI & Data Science", icon: "02" },
+  toolsPlatforms: { label: "Tools & Platforms", icon: "03" },
 };
+
+// Skill meter bar component
+function SkillMeter({ name, value, tags }: { name: string; value: number; tags?: string[] }) {
+  const bars = 10;
+  const filledBars = Math.floor(value / 10);
+
+  return (
+    <div className="flex items-center gap-4 py-3 border-b border-dashed border-border last:border-b-0">
+      <div className="flex-1">
+        <div className="flex items-center justify-between mb-1">
+          <span className="text-foreground text-sm font-medium">{name}</span>
+          <span className="text-muted-foreground text-xs">{value}%</span>
+        </div>
+        {tags && tags.length > 0 && (
+          <div className="flex gap-1 mt-1">
+            {tags.map((tag) => (
+              <span key={tag} className="text-xs text-muted-foreground italic">
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
+      </div>
+      <div className="flex gap-0.5">
+        {[...Array(bars)].map((_, i) => (
+          <div
+            key={i}
+            className={`w-2 h-5 transition-colors ${
+              i < filledBars 
+                ? 'bg-accent' 
+                : 'bg-muted'
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export default function Skills() {
   return (
     <section
       id="skills"
-      className="w-full min-h-screen flex flex-col items-center p-6 pt-16 md:p-12 md:pt-24 lg:p-16 lg:pt-28 xl:p-24 xl:pt-32"
+      className="w-full min-h-screen flex flex-col items-center p-6 pt-16 md:p-12 md:pt-24 lg:p-16 lg:pt-28 xl:p-24 xl:pt-32 bg-card"
     >
-      <div className="w-full max-w-3xl">
-        <h1 className="text-3xl md:text-4xl font-extrabold mb-10 text-center">
-          Technical Skills
-        </h1>
+      <div className="w-full max-w-5xl">
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12"
+        >
+          <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-3">
+            Technical Expertise
+          </p>
+          <h2 className="text-3xl md:text-4xl font-bold">
+            Skills & Technologies
+          </h2>
+        </motion.div>
 
-        <Accordion type="single" collapsible className="w-full space-y-4">
+        {/* Noir Divider */}
+        <div className="noir-divider">
+          <span className="w-2 h-2 bg-accent rounded-full" />
+        </div>
+
+        {/* Skills Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {(Object.entries(skillsData) as [keyof SkillsData, SkillItem[]][]).map(
             ([categoryKey, skillsInSection], categoryIndex) => (
-              <AccordionItem value={`item-${categoryIndex}`} key={categoryKey} className="border rounded-lg last:border-b">
-                <AccordionTrigger className="p-4 text-lg hover:no-underline">
-                  {formatCategoryName(categoryKey)}
-                </AccordionTrigger>
-                <AccordionContent className="p-4 pt-0">
-                  <div className="space-y-6">
-                    {skillsInSection.map((skill: SkillItem, index: number) => (
-                      <div key={index} className="flex flex-col gap-3 pt-3 border-t first:border-t-0 first:pt-0">
-                        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                          <h3 className="text-md font-semibold">{skill.name}</h3>
-                          <div className="flex flex-wrap gap-1.5">
-                            {skill.tags && skill.tags.map((tag: string, tagIndex: number) => (
-                              <Badge key={tagIndex} variant="outline" className="text-xs px-1.5 py-0.5">
-                                {tag}
-                              </Badge>
-                            ))}
-                          </div>
-                        </div>
-                        {skill.proficiency !== undefined && (
-                          <div>
-                            <div className="flex justify-between text-xs mb-1">
-                              <span>Proficiency</span>
-                              <span>{skill.proficiency}%</span>
-                            </div>
-                            <Progress value={skill.proficiency} className="w-full h-1.5" />
-                          </div>
-                        )}
-                      </div>
+              <motion.div
+                key={categoryKey}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: categoryIndex * 0.1 }}
+                className="paper-card"
+              >
+                <div className="bg-background p-6 border border-border relative">
+                  {/* Category Label */}
+                  <div className="absolute -top-3 left-4 px-3 py-1 bg-foreground text-background text-xs tracking-widest uppercase">
+                    {categoryConfig[categoryKey].label}
+                  </div>
+
+                  {/* Category Number */}
+                  <div className="absolute -top-3 right-4 px-2 py-1 text-accent text-xs font-bold">
+                    {categoryConfig[categoryKey].icon}
+                  </div>
+
+                  {/* Skills List */}
+                  <div className="mt-4">
+                    {skillsInSection.map((skill: SkillItem) => (
+                      <SkillMeter
+                        key={skill.name}
+                        name={skill.name}
+                        value={skill.proficiency || 0}
+                        tags={skill.tags}
+                      />
                     ))}
                   </div>
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-        </Accordion>
+                </div>
+              </motion.div>
+            )
+          )}
+        </div>
       </div>
     </section>
   );

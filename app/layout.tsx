@@ -2,19 +2,20 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
 import { AppSidebar } from "@/components/app-sidebar"
-import { JetBrains_Mono } from 'next/font/google';
+import { Courier_Prime } from 'next/font/google';
 import { ThemeProvider } from "@/components/theme-provider"
 
-
-
-const jetbrainsMono = JetBrains_Mono({
+const courierPrime = Courier_Prime({
   subsets: ['latin'],
-  display: 'swap', // Recommended for better performance and user experience
-  variable: '--font-jetbrains-mono', // Define a CSS variable for Tailwind CSS or global use
+  weight: ['400', '700'],
+  style: ['normal', 'italic'],
+  display: 'swap',
+  variable: '--font-courier-prime',
 });
+
 export const metadata: Metadata = {
-  title: "Aryan Gupta | Developer Portfolio",
-  description: "This is a portfolio website of Aryan Gupta.",
+  title: "Aryan Gupta | Full-Stack Developer & AI Enthusiast",
+  description: "Portfolio of Aryan Gupta - Full-Stack Developer, AI Enthusiast, and National Hackathon Winner. Building scalable applications and intelligent systems.",
 };
 
 export default function RootLayout({
@@ -25,24 +26,21 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <title>Aryan Gupta</title>
-        </head>  
-        
-      <body
-        className={`${jetbrainsMono.className} ${jetbrainsMono.variable}`}
-      ><ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-        <SidebarProvider>
-        <AppSidebar />
-        <SidebarTrigger />
-        {children}
-        </SidebarProvider>
+        <title>Aryan Gupta | Developer Portfolio</title>
+      </head>
+      <body className={`${courierPrime.className} ${courierPrime.variable} film-grain`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <SidebarProvider>
+            <AppSidebar />
+            <SidebarTrigger />
+            {children}
+          </SidebarProvider>
         </ThemeProvider>
-      
       </body>
     </html>
   );
