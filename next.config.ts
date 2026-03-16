@@ -1,6 +1,9 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+import type { NextConfig } from 'next';
+
+const nextConfig: NextConfig = {
+  // Image config - using unoptimized for compatibility
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
@@ -10,6 +13,18 @@ const nextConfig = {
       },
     ],
   },
+  
+  // Performance optimizations
+  poweredByHeader: false,
+  compress: true,
+  
+  // Generate static pages where possible (ISR without revalidate = static)
+  // Pages with 'use client' are automatically static
+  
+  // Experimental optimizations
+  experimental: {
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
+  },
 };
 
-module.exports = nextConfig;
+export default nextConfig;

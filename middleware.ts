@@ -1,6 +1,9 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
+// Use Edge Runtime for instant cold starts (experimental in Next.js 16)
+export const runtime = 'experimental-edge';
+
 export function middleware(req: NextRequest) {
   const ua = (req.headers.get('user-agent') || '').toLowerCase();
   const url = req.nextUrl;
