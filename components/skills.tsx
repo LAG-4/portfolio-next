@@ -17,7 +17,8 @@ interface SkillsData {
 
 const skillsData: SkillsData = {
   development: [
-    { name: "Java", proficiency: 75, tags: ["Data Structures"] },
+    { name: "Mainframe (COBOL/JCL)", proficiency: 80, tags: ["IBM z/OS", "DB2"] },
+    { name: "Java", proficiency: 80, tags: ["OOP", "Enterprise"] },
     { name: "Dart & Flutter", proficiency: 95, tags: ["Mobile Dev"] },
     { name: "Python", proficiency: 90, tags: ["AI/ML", "Backend"] },
     { name: "JavaScript", proficiency: 70, tags: ["Frontend", "Node.js"] },
@@ -32,6 +33,7 @@ const skillsData: SkillsData = {
     { name: "Google Gemini", proficiency: 100, tags: ["Multimodal AI"] },
   ],
   toolsPlatforms: [
+    { name: "SQL & Databases", proficiency: 80, tags: ["DB2", "RDBMS"] },
     { name: "Git & GitHub", proficiency: 95, tags: ["Version Control"] },
     { name: "Firebase", proficiency: 75, tags: ["BaaS"] },
     { name: "AWS (Basics)", proficiency: 70, tags: ["Cloud Practitioner"] },

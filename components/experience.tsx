@@ -17,6 +17,17 @@ interface ExperienceEntry {
 
 const experiences: ExperienceEntry[] = [
   {
+    role: "Systems Engineer (Mainframe Developer)",
+    company: "Infosys",
+    duration: "Feb 2026 - Present",
+    description: [
+      "Specializing in mainframe application development, writing highly optimized COBOL and JCL scripts on IBM z/OS.",
+      "Completed comprehensive enterprise training in Java, SQL, and relational database systems.",
+      "Maintaining, upgrading, and debugging mission-critical core database queries using DB2."
+    ],
+    technologies: ["COBOL", "JCL", "IBM z/OS", "DB2", "Java", "SQL"],
+  },
+  {
     role: "Flutter Development Intern",
     company: "Persist Ventures",
     duration: "May 2024 - July 2024",

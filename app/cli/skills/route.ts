@@ -7,8 +7,8 @@ export async function GET() {
   const lines = [
     `${bold}${cyan}Skills${reset}`,
     '',
-    `${bold}Languages:${reset} Java, Dart, Python` ,
-    `${bold}Technologies:${reset} Flutter, MERN Stack, Firebase, Git`,
+    `${bold}Languages:${reset} Java, COBOL, JCL, Dart, Python`,
+    `${bold}Technologies:${reset} IBM z/OS, DB2, SQL, Flutter, MERN Stack, Firebase, Git`,
     `${bold}AI:${reset} Gen AI, AI Agents, LangChain, Phidata (agno), Linux`,
     `${bold}Creative:${reset} Figma, Adobe After Effects, Photoshop, Lightroom, Canva`,
     `${bold}3D:${reset} Blender (basic)`,

@@ -8,7 +8,7 @@
 
 [1mHi — this is the CLI view of lagaryan.click[0m
 
-[1mAbout:[0m Full-stack developer building AI & automation tools.
+[1mAbout:[0m Systems Engineer (Mainframe Developer) at Infosys | B.Tech (CS) Graduate | SIH 2023 winner.
 [1mProjects:[0m ]8;;https://lagaryan.click/projectsSee highlights]8;;  |  [36m/cli/projects[0m
 [1mContact:[0m ]8;;mailto:hello@lagaryan.clickEmail]8;;  |  [35m/cli/contact[0m
 

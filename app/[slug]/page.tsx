@@ -56,14 +56,16 @@ export default async function DynamicPage({ params }: Props) {
           <CardContent>
             <ul className="space-y-1">
               <li>
-                <Badge variant="secondary">Java</Badge>{" "}
-                <Badge variant="secondary">Dart</Badge>{" "}
-                <Badge variant="secondary">Python</Badge>
+                <Badge variant="secondary">COBOL</Badge>{" "}
+                <Badge variant="secondary">JCL</Badge>{" "}
+                <Badge variant="secondary">IBM z/OS</Badge>{" "}
+                <Badge variant="secondary">DB2</Badge>
               </li>
               <li>
-                <Badge variant="secondary">Flutter</Badge>{" "}
-                <Badge variant="secondary">MERN Stack</Badge>{" "}
-                <Badge variant="secondary">Firebase</Badge>
+                <Badge variant="secondary">Java</Badge>{" "}
+                <Badge variant="secondary">SQL</Badge>{" "}
+                <Badge variant="secondary">Python</Badge>{" "}
+                <Badge variant="secondary">Flutter</Badge>
               </li>
               <li>
                 AI & Data: Gen AI, LangChain, RAG, OpenAI, API Integration
@@ -132,15 +134,23 @@ export default async function DynamicPage({ params }: Props) {
         </Card>
       </section>
 
-      {/* Internship */}
+      {/* Experience */}
       <section className="max-w-3xl mx-auto mb-14">
         <Card>
-          <CardHeader className="font-semibold text-lg">Internship Highlights</CardHeader>
+          <CardHeader className="font-semibold text-lg">Professional Experience</CardHeader>
           <CardContent>
-            <ul className="text-base space-y-1">
+            <ul className="text-base space-y-6">
+              <li>
+                <span className="font-semibold">Systems Engineer (Mainframe Developer), Infosys</span> (Feb 2026–Present):
+                <ul className="ml-4 list-disc space-y-1 mt-1">
+                  <li>Specializing in mainframe application development, writing highly optimized COBOL and JCL scripts on IBM z/OS.</li>
+                  <li>Completed comprehensive enterprise training in Java, SQL, and database management.</li>
+                  <li>Maintaining, upgrading, and debugging mission-critical core database queries using DB2.</li>
+                </ul>
+              </li>
               <li>
                 <span className="font-semibold">Flutter Dev Intern, Persist Ventures</span> (May–July 2024):
-                <ul className="ml-4 list-disc">
+                <ul className="ml-4 list-disc space-y-1 mt-1">
                   <li>Developed & shipped a Flutter app for 15,000+ users</li>
                   <li>Integrated Django backend, cut data latency by 30%</li>
                   <li>Improved UX, raised user satisfaction by 40%</li>

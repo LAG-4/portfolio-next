@@ -31,8 +31,8 @@ function body() {
 
   const about = [
     h('About'),
-    `B.Tech (CS) senior; SIH 2023 winner.`,
-    `I build AI agents, Flutter apps, and rapid MVPs that ship in days.`,
+    `Systems Engineer at Infosys | B.Tech (CS) Graduate | SIH 2023 winner.`,
+    `I build AI agents, full-stack systems, and specialized mainframe solutions.`,
   ].join('\n');
 
   const socials = [
@@ -46,6 +46,7 @@ function body() {
 
   const highlights = [
     h('Highlights'),
+    `• ${bold}Systems Engineer (Mainframe Developer) at Infosys${reset} (Feb 2026–Present)`,
     `• ${bold}Winner, Smart India Hackathon 2023${reset}`,
     `• Top 5/Top 10 finishes across multiple hackathons`,
     `• COO (ex), scaled product to ${bold}15K+ users${reset}`,
@@ -53,8 +54,8 @@ function body() {
     `• Homelab: Jellyfin, Immich, n8n on Raspberry Pi with Tailscale`,
   ].join('\n');
 
-  const skills1 = ['Flutter', 'Dart', 'Java', 'Python', 'React/Next.js', 'TypeScript', 'Firebase', 'AWS'];
-  const skills2 = ['LangChain', 'Phidata', 'Linux', 'n8n', 'Raspberry Pi', 'Tailwind', 'Figma', 'Adobe AE/PS'];
+  const skills1 = ['Mainframe (COBOL/JCL/zOS)', 'Java', 'SQL', 'Flutter', 'Dart', 'Python', 'React/Next.js'];
+  const skills2 = ['Firebase', 'AWS', 'LangChain', 'Phidata', 'Linux', 'n8n', 'Raspberry Pi', 'Tailwind'];
   const skills = [
     h('Skills'),
     skills1.join(`${dim} · ${reset}`),
