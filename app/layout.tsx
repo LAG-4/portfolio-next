@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
-import { AppSidebar } from "@/components/app-sidebar"
-import { Courier_Prime } from 'next/font/google';
-import { ThemeProvider } from "@/components/theme-provider"
+import { Courier_Prime, Inter, Outfit, Space_Grotesk } from 'next/font/google';
+import { ThemeProvider } from "@/components/theme-provider";
+import { ClientLayoutWrapper } from "@/components/client-layout";
 
 const courierPrime = Courier_Prime({
   subsets: ['latin'],
@@ -11,6 +10,24 @@ const courierPrime = Courier_Prime({
   style: ['normal', 'italic'],
   display: 'swap',
   variable: '--font-courier-prime',
+});
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+});
+
+const outfit = Outfit({
+  subsets: ['latin'],
+  variable: '--font-outfit',
+  display: 'swap',
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  variable: '--font-space-grotesk',
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -28,20 +45,19 @@ export default function RootLayout({
       <head>
         <title>Aryan Gupta | Developer Portfolio</title>
       </head>
-      <body className={`${courierPrime.className} ${courierPrime.variable} film-grain`}>
+      <body className={`${courierPrime.variable} ${inter.variable} ${outfit.variable} ${spaceGrotesk.variable} antialiased`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
-          <SidebarProvider>
-            <AppSidebar />
-            <SidebarTrigger />
+          <ClientLayoutWrapper courierPrimeClass={courierPrime.className}>
             {children}
-          </SidebarProvider>
+          </ClientLayoutWrapper>
         </ThemeProvider>
       </body>
     </html>
   );
 }
+
