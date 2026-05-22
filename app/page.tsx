@@ -585,22 +585,20 @@ export default function RootHomePage() {
                 <span className="text-white font-semibold">{commandText}</span>
               </div>
 
-              <div className="space-y-1.5 text-indigo-400 font-bold leading-normal text-xs md:text-sm overflow-x-auto whitespace-pre">
-                {`   ░███    ░█████████  ░██     ░██    ░███    ░███    ░██ `}
-                <br />
-                {`  ░██░██   ░██     ░██  ░██   ░██    ░██░██   ░████   ░██ `}
-                <br />
-                {` ░██  ░██  ░██     ░██   ░██ ░██    ░██  ░██  ░██░██  ░██ `}
-                <br />
-                {`░█████████ ░█████████     ░████    ░█████████ ░██ ░██ ░██ `}
+              <div className="text-indigo-400 font-bold leading-normal text-xs md:text-sm overflow-x-auto whitespace-pre font-mono">
+                {`═════════════════════════════════════════════════════════════════════════════\n`}
+                {`                                 `} <span className="text-cyan-400">ARYAN GUPTA</span>{`\n`}
+                {`              `} <span className="text-white font-bold">Systems Engineer & Mainframe Developer @ Infosys</span>{`\n`}
+                {`                    `} <span className="text-zinc-500">Active Session // lagaryan.click/cli</span>{`\n`}
+                {`═════════════════════════════════════════════════════════════════════════════`}
               </div>
 
-              <div className="space-y-2 border-t border-zinc-900/60 pt-4 text-xs md:text-sm text-zinc-400 font-medium">
+              <div className="space-y-2 border-t border-zinc-900/60 pt-4 text-xs md:text-sm text-zinc-400 font-mono">
                 <div>Welcome to Aryan Gupta's Command Line Portfolio Hub.</div>
                 <div className="flex items-center gap-2">
                   <span className="text-emerald-400">?</span> Loading remote modules... <span className="text-emerald-500 font-bold">Done.</span>
                 </div>
-                <div className="text-zinc-500 font-mono mt-2">
+                <div className="text-zinc-500 mt-2">
                   Commands: [1] skills | [2] experience | [3] projects | [4] contact
                 </div>
               </div>
@@ -714,20 +712,7 @@ export default function RootHomePage() {
 
       </main>
 
-      {/* Floating Bottom Glass Navigation Dock */}
-      <div className="fixed bottom-6 left-1/2 -translate-x-1/2 bg-zinc-900/70 border border-zinc-800/80 rounded-2xl px-8 py-4 flex items-center gap-8 backdrop-blur-lg shadow-xl shadow-black/50 z-40 max-w-lg w-fit">
-        <a href="#skills" className="text-sm text-zinc-300 hover:text-white transition-colors font-outfit font-bold uppercase tracking-widest">
-          Skills
-        </a>
-        <span className="text-zinc-800">|</span>
-        <a href="#experience" className="text-sm text-zinc-300 hover:text-white transition-colors font-outfit font-bold uppercase tracking-widest">
-          Exp
-        </a>
-        <span className="text-zinc-800">|</span>
-        <a href="#projects" className="text-sm text-zinc-300 hover:text-white transition-colors font-outfit font-bold uppercase tracking-widest">
-          Work
-        </a>
-      </div>
+
 
     </div>
   );

@@ -46,24 +46,17 @@ export default function CliShowcase() {
               <span className="typing-effect">{command}</span>
             </div>
 
-            <div className="space-y-1 opacity-90">
-              <div className="text-cyan-400 font-bold">
-                {"   ░███    ░█████████  ░██     ░██    ░███    ░███    ░██ "}
+            <div className="text-indigo-400 font-bold leading-normal text-xs md:text-sm overflow-x-auto whitespace-pre font-mono">
+              {`═════════════════════════════════════════════════════════════════════════════\n`}
+              {`                                 `} <span className="text-cyan-400">ARYAN GUPTA</span>{`\n`}
+              {`              `} <span className="text-white font-bold">Systems Engineer & Mainframe Developer @ Infosys</span>{`\n`}
+              {`                    `} <span className="text-zinc-500">Active Session // lagaryan.click/cli</span>{`\n`}
+              {`═════════════════════════════════════════════════════════════════════════════`}
+              <div className="mt-4 text-gray-400 font-mono">
+                Welcome to Aryan Gupta's Command Line Portfolio Hub.
               </div>
-              <div className="text-cyan-400 font-bold">
-                {"  ░██░██   ░██     ░██  ░██   ░██    ░██░██   ░████   ░██ "}
-              </div>
-              <div className="text-cyan-400 font-bold">
-                {" ░██  ░██  ░██     ░██   ░██ ░██    ░██  ░██  ░██░██  ░██ "}
-              </div>
-              <div className="text-cyan-400 font-bold hidden sm:block">
-                {"░█████████ ░█████████     ░████    ░█████████ ░██ ░██ ░██ "}
-              </div>
-              <div className="mt-4 text-gray-400">
-                Welcome to the CLI portfolio...
-              </div>
-              <div>
-                <span className="text-green-400">?</span> Loading projects... <span className="text-green-500">Done.</span>
+              <div className="font-mono mt-1">
+                <span className="text-green-400 font-bold">?</span> Loading remote modules... <span className="text-green-500 font-bold">Done.</span>
               </div>
             </div>
 

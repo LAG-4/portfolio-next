@@ -1,23 +1,32 @@
-import { ansi } from '@/lib/ansi';
+import { ansi, drawBox, streamLinesResponse } from '@/lib/ansi';
 
 export const runtime = 'nodejs';
 
-export async function GET() {
-  const { bold, reset, cyan, dim } = ansi;
-  const lines = [
-    `${bold}${cyan}Competitions & Awards${reset}`,
-    '',
-    `• ${bold}Winner, Smart India Hackathon (2023)${reset} — National winner under Govt. of India (women’s safety app).`,
-    `• ${bold}Multiple Hackathon Finalist${reset} — Top-tier finishes (Top 5 / Top 10) across 4–5 events.`,
-    `• ${bold}Startup Pitch Experience${reset} — Presented at a government incubator meetup.`,
-    `• ${bold}Special Mentions, Google Hackathon${reset}.`,
-    '',
-    `${dim}See more on the website projects page for context and demos.${reset}`,
+export async function GET(request: Request) {
+  const { bold, reset, highlight, dim, white } = ansi;
+
+  const awardLines = [
+    `${bold}${white}- Winner, Smart India Hackathon (SIH 2023)${reset}`,
+    `  ${dim}Scope: National (Govt. of India) | Project: SheSafe${reset}`,
+    `  - Championed first place out of thousands in campus safety IoT.`,
+    `  - Integrated Arduino micro-wearables with secure Firebase DBs.`,
+    ``,
+    `${bold}${white}- Multiple Hackathon Finalist${reset}`,
+    `  - Consistently ranked Top 5 / Top 10 across 4+ high-profile events.`,
+    `  - Amdocs Talent Tank Semi-Finalist (Top 10% bracket globally).`,
+    ``,
+    `${bold}${white}- Special Mentions, Google Hackathon${reset}`,
+    `  - Recognized for designing innovative green carbon footprints.`,
+    ``,
+    `${bold}${white}- Incubator Startup Pitch Experience${reset}`,
+    `  - Successfully pitched campus safety IoT to regional state panels.`
   ];
-  return new Response(lines.join('\n') + '\n', {
-    headers: {
-      'Content-Type': 'text/plain; charset=utf-8',
-      'Cache-Control': 'no-store',
-    },
-  });
+
+  const content = [
+    drawBox('ACADEMIC AWARDS & COMPETITIVE ACHIEVEMENTS', awardLines, 75, highlight),
+    '',
+    `${dim}Detailed hackathon portfolios, photos, and diplomas are available on requests.${reset}`
+  ].join('\n').split('\n');
+
+  return streamLinesResponse(content, request);
 }

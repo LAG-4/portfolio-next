@@ -1,8 +1,6 @@
 "use client";
 
-import { usePathname } from "next/navigation";
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import { AppSidebar } from "@/components/app-sidebar";
+
 
 interface ClientLayoutWrapperProps {
   children: React.ReactNode;
@@ -10,31 +8,23 @@ interface ClientLayoutWrapperProps {
 }
 
 export function ClientLayoutWrapper({ children, courierPrimeClass }: ClientLayoutWrapperProps) {
-  const pathname = usePathname();
-  
-  // Identify if we are on one of the new high-density premium routed portfolio pages
-  const isRedesignedRoute = pathname === "/";
-
-  if (isRedesignedRoute) {
-    // For redesigned pages: no sidebar, no film grain, no forced Courier Prime font at root level.
-    // We will apply our premium modern typography (Outfit / Inter) inside those pages.
-    return (
-      <div className="min-h-screen bg-background text-foreground transition-colors duration-300">
-        {children}
-      </div>
-    );
-  }
-
-  // Legacy pages behavior (remains exactly as it was)
+  // Completely remove legacy sidebar and film grain layouts for a unified, modern dark cyber-grid experience.
   return (
-    <div className={`${courierPrimeClass} film-grain min-h-screen flex`}>
-      <SidebarProvider>
-        <AppSidebar />
-        <SidebarTrigger />
+    <div className="min-h-screen bg-[#070709] text-[#f4f4f6] font-inter relative overflow-x-hidden selection:bg-indigo-600 selection:text-white pb-24">
+      {/* Cyber Grid Lines backdrop */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#131316_1px,transparent_1px),linear-gradient(to_bottom,#131316_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none z-0" />
+
+      {/* Decorative premium ambient glow */}
+      <div className="absolute top-1/4 left-1/3 w-[600px] h-[600px] bg-gradient-to-br from-indigo-500/5 to-purple-500/0 rounded-full blur-[160px] pointer-events-none z-0" />
+
+      {/* Primary content area */}
+      <div className="relative z-10 flex flex-col justify-between min-h-screen">
         <main className="flex-1 w-full relative">
           {children}
         </main>
-      </SidebarProvider>
+      </div>
+
+
     </div>
   );
 }

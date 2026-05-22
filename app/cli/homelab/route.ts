@@ -1,23 +1,31 @@
-import { ansi } from '@/lib/ansi';
+import { ansi, drawBox, streamLinesResponse } from '@/lib/ansi';
 
 export const runtime = 'nodejs';
 
-export async function GET() {
-  const { bold, reset, cyan, dim } = ansi;
-  const lines = [
-    `${bold}${cyan}Systems Administration & Homelab${reset}`,
-    '',
-    `${bold}Infra:${reset} Raspberry Pi server; ${bold}Docker${reset} + Docker Compose for services; ${bold}TrueNAS${reset} for storage/snapshots.`,
-    `${bold}Apps:${reset} Jellyfin (media), Immich (AI photo backup), n8n (automation/workflows).`,
-    `${bold}Network:${reset} ${bold}Cloudflare DNS${reset} + ${bold}cloudflared${reset} (Tunnels) for secure public access; ${bold}Tailscale${reset} for VPN/remote.`,
-    `${bold}Domains:${reset} Managed subdomains and routing via Cloudflare (Zero Trust policies).`,
-    '',
-    `${dim}Self-hosted, reproducible via Compose; backups handled by TrueNAS snapshots.${reset}`,
+export async function GET(request: Request) {
+  const { bold, reset, primary, dim, white, success } = ansi;
+
+  const homelabLines = [
+    `${bold}${white}- Hardware Cluster :${reset} Raspberry Pi Server node, TrueNAS network storage.`,
+    `${bold}${white}- Containerization :${reset} Docker & Docker-Compose microservices orchestration.`,
+    `${bold}${white}- Core Server Apps :${reset}`,
+    `  - ${bold}${primary}Jellyfin${reset} : H.264/H.265 media streaming node.`,
+    `  - ${bold}${primary}Immich${reset}   : Self-hosted photo backup client (AI tagging).`,
+    `  - ${bold}${primary}n8n${reset}      : Pipeline workflow orchestrator & cron automations.`,
+    ``,
+    `${bold}${white}- Network Routing  :${reset}`,
+    `  - ${bold}${success}Tailscale VPN${reset} : WireGuard overlay network linking nodes securely.`,
+    `  - ${bold}${success}Cloudflare DNS${reset}: Managed domains, SSL keys & zero-trust tunnels.`,
+    `  - ${bold}${success}cloudflared${reset}   : Secure outbound proxy shielding public IP exposures.`,
+    ``,
+    `${bold}${white}- Backup Strategies:${reset} RAID mirroring, TrueNAS snapshots & off-sites.`
   ];
-  return new Response(lines.join('\n') + '\n', {
-    headers: {
-      'Content-Type': 'text/plain; charset=utf-8',
-      'Cache-Control': 'no-store',
-    },
-  });
+
+  const content = [
+    drawBox('HOMELAB DEVOPS & INFRASTRUCTURE CONFIG', homelabLines, 75, primary),
+    '',
+    `${dim}Homelab builds are reproducible via custom docker-compose YAML pipelines.${reset}`
+  ].join('\n').split('\n');
+
+  return streamLinesResponse(content, request);
 }
