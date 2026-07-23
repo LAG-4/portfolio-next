@@ -1,10 +1,9 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
-// Use Edge Runtime for instant cold starts (experimental in Next.js 16)
-export const runtime = 'experimental-edge';
+// Proxy (formerly "middleware") always runs on the Edge Runtime for instant cold starts.
 
-export function middleware(req: NextRequest) {
+export function proxy(req: NextRequest) {
   const ua = (req.headers.get('user-agent') || '').toLowerCase();
   const url = req.nextUrl;
 
