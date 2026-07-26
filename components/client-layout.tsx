@@ -1,14 +1,25 @@
 "use client";
 
-
+import { usePathname } from "next/navigation";
 
 interface ClientLayoutWrapperProps {
   children: React.ReactNode;
   courierPrimeClass: string;
 }
 
-export function ClientLayoutWrapper({ children, courierPrimeClass }: ClientLayoutWrapperProps) {
-  // Completely remove legacy sidebar and film grain layouts for a unified, modern dark cyber-grid experience.
+// Design-exploration routes (/1–/5 and the /designs index) own their full
+// layout, so they bypass the site's shared cyber-grid chrome entirely.
+const isDesignRoute = (path: string | null) =>
+  !!path && (/^\/[1-5](\/|$)/.test(path) || path.startsWith("/designs"));
+
+export function ClientLayoutWrapper({ children }: ClientLayoutWrapperProps) {
+  const pathname = usePathname();
+
+  if (isDesignRoute(pathname)) {
+    return <>{children}</>;
+  }
+
+  // Unified modern dark cyber-grid experience for the main site.
   return (
     <div className="min-h-screen bg-[#070709] text-[#f4f4f6] font-inter relative overflow-x-hidden selection:bg-indigo-600 selection:text-white pb-24">
       {/* Cyber Grid Lines backdrop */}
@@ -19,12 +30,8 @@ export function ClientLayoutWrapper({ children, courierPrimeClass }: ClientLayou
 
       {/* Primary content area */}
       <div className="relative z-10 flex flex-col justify-between min-h-screen">
-        <main className="flex-1 w-full relative">
-          {children}
-        </main>
+        <main className="flex-1 w-full relative">{children}</main>
       </div>
-
-
     </div>
   );
 }
