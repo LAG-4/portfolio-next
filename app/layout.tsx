@@ -3,8 +3,8 @@ import "./globals.css";
 import { ClientLayoutWrapper } from "@/components/client-layout";
 
 export const metadata: Metadata = {
-  title: "Aryan Gupta | Full-Stack Developer & AI Enthusiast",
-  description: "Portfolio of Aryan Gupta - Full-Stack Developer, AI Enthusiast, and National Hackathon Winner. Building scalable applications and intelligent systems.",
+  title: "Aryan Gupta | Systems Engineer & Full-Stack Developer",
+  description: "Portfolio of Aryan Gupta, a Systems Engineer at Infosys working on production monitoring and incident coordination for the IKEA account.",
 };
 
 export default function RootLayout({

@@ -17,15 +17,15 @@ interface ExperienceEntry {
 
 const experiences: ExperienceEntry[] = [
   {
-    role: "Systems Engineer (Mainframe Developer)",
+    role: "Systems Engineer - IKEA Account",
     company: "Infosys",
     duration: "Feb 2026 - Present",
     description: [
-      "Specializing in mainframe application development, writing highly optimized COBOL and JCL scripts on IBM z/OS.",
-      "Completed comprehensive enterprise training in Java, SQL, and relational database systems.",
-      "Maintaining, upgrading, and debugging mission-critical core database queries using DB2."
+      "Monitor Grafana and Splunk dashboards for IKEA web, app, and in-store systems.",
+      "Raise incident tickets when monitoring reveals an issue or service downtime.",
+      "Report incidents and relevant monitoring details to the responsible teams for investigation."
     ],
-    technologies: ["COBOL", "JCL", "IBM z/OS", "DB2", "Java", "SQL"],
+    technologies: ["Grafana", "Splunk", "Production Monitoring", "Incident Ticketing", "Incident Reporting"],
   },
   {
     role: "Flutter Development Intern",

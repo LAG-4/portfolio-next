@@ -24,15 +24,15 @@ export default function RootHomePage() {
 
   const experiences = [
     {
-      role: "Systems Engineer (Mainframe Developer)",
+      role: "Systems Engineer - IKEA Account",
       company: "Infosys",
       date: "Feb 2026 - Present",
       bullets: [
-        "Specializing in mainframe application development, writing highly optimized COBOL and JCL scripts on IBM z/OS.",
-        "Completed comprehensive enterprise training in Java, SQL, and relational database systems.",
-        "Maintaining, upgrading, and debugging mission-critical core database queries using DB2."
+        "Monitor Grafana and Splunk dashboards for IKEA web, app, and in-store systems.",
+        "Raise incident tickets when monitoring reveals an issue or service downtime.",
+        "Report incidents and relevant monitoring details to the responsible teams for investigation."
       ],
-      skills: ["COBOL", "JCL", "IBM z/OS", "DB2", "Java", "SQL"]
+      skills: ["Grafana", "Splunk", "Production Monitoring", "Incident Ticketing", "Incident Reporting"]
     },
     {
       role: "Flutter Development Intern",
@@ -51,12 +51,12 @@ export default function RootHomePage() {
 
   const skillCategories = [
     {
-      title: "Mainframe & Databases",
+      title: "Observability & Incident Operations",
       skills: [
-        { name: "COBOL & JCL", details: "IBM z/OS" },
-        { name: "DB2", details: "Mainframe SQL" },
-        { name: "Java", details: "OOP & Enterprise" },
-        { name: "SQL", details: "RDBMS Design" }
+        { name: "Grafana", details: "Dashboard Monitoring" },
+        { name: "Splunk", details: "Log Monitoring" },
+        { name: "Incident Ticketing", details: "Issue & Downtime Reports" },
+        { name: "Team Escalation", details: "Incident Coordination" }
       ]
     },
     {
@@ -95,7 +95,7 @@ export default function RootHomePage() {
     { label: "Education", value: "B.Tech CS @ VIT", icon: GraduationCap },
     { label: "Location", value: "India", icon: MapPin },
     { label: "SIH Winner", value: "1st Place (National)", icon: Award },
-    { label: "Engineering", value: "Mainframe & Full-Stack", icon: Cpu }
+    { label: "Operations", value: "Monitoring & Incidents", icon: Cpu }
   ];
 
   return (
@@ -120,7 +120,7 @@ export default function RootHomePage() {
         <section className="space-y-8">
           <div>
             <span className="text-sm md:text-base font-mono uppercase text-indigo-400 tracking-[0.25em] font-bold block mb-4">
-              Systems Engineer & Full-Stack Builder
+              Production Monitoring & Incident Coordination
             </span>
             <h1 className="text-6xl md:text-8xl font-outfit font-extrabold tracking-tight text-white leading-none">
               Aryan Gupta
@@ -128,7 +128,7 @@ export default function RootHomePage() {
           </div>
 
           <p className="text-zinc-200 text-xl md:text-2xl font-normal max-w-3xl leading-relaxed">
-            I build resilient <span className="text-white font-bold">IBM z/OS systems</span> at <span className="text-white font-bold underline decoration-indigo-500 decoration-2">Infosys</span>, polished full-stack products, and autonomous AI workflows.
+            At <span className="text-white font-bold underline decoration-indigo-500 decoration-2">Infosys</span>, I monitor <span className="text-white font-bold">Grafana and Splunk dashboards</span> for IKEA web, app, and in-store systems. When an issue or downtime appears, I raise a ticket and report it to the responsible team.
           </p>
 
           {/* Social Links Row */}
@@ -417,7 +417,7 @@ export default function RootHomePage() {
               <div className="text-indigo-400 font-bold leading-normal text-xs md:text-sm overflow-x-auto whitespace-pre font-mono">
                 {`═════════════════════════════════════════════════════════════════════════════\n`}
                 {`                                 `} <span className="text-cyan-400">ARYAN GUPTA</span>{`\n`}
-                {`              `} <span className="text-white font-bold">Systems Engineer & Mainframe Developer @ Infosys</span>{`\n`}
+                {`              `} <span className="text-white font-bold">Systems Engineer, IKEA Account @ Infosys</span>{`\n`}
                 {`                    `} <span className="text-zinc-400">Active Session // lagaryan.click/cli</span>{`\n`}
                 {`═════════════════════════════════════════════════════════════════════════════`}
               </div>

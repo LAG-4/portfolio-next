@@ -6,12 +6,12 @@ export async function GET() {
   const { bold, reset, secondary, dim, white, primary, success } = ansi;
 
   const expLines = [
-    `${bold}${white}- Systems Engineer (Mainframe Developer) @ Infosys${reset}`,
+    `${bold}${white}- Systems Engineer, IKEA Account @ Infosys${reset}`,
     `  ${dim}Duration: Feb 2026 - Present | Location: India${reset}`,
-    `  - Specializing in mainframe database design & JCL operations.`,
-    `  - Developing and debugging COBOL scripts on IBM z/OS mainframes.`,
-    `  - Maintaining enterprise transaction database integrity in DB2.`,
-    `  - Completed enterprise training in Java, SQL & OOP architectures.`,
+    `  - Monitor Grafana and Splunk dashboards for IKEA systems.`,
+    `  - Cover web, app, and in-store service dashboards.`,
+    `  - Raise tickets for detected issues or service downtime.`,
+    `  - Report incidents to the responsible teams.`,
     ``,
     `${bold}${white}- Marketing Head -> COO @ DailywellnessAI${reset}`,
     `  ${dim}Duration: Dec 2024 - Feb 2025 | Location: Hybrid${reset}`,

@@ -6,8 +6,9 @@ export async function GET() {
   const { bold, reset, highlight, dim, white } = ansi;
 
   const skillLines = [
-    `${bold}${white}- Languages     :${reset} Java, COBOL, JCL, Dart, Python, SQL`,
-    `${bold}${white}- Mainframe Tech:${reset} IBM z/OS Mainframe environment, DB2 database systems`,
+    `${bold}${white}- Observability :${reset} Grafana dashboards, Splunk logs, service monitoring`,
+    `${bold}${white}- Incident Ops  :${reset} Issue detection, ticketing, reporting, escalation`,
+    `${bold}${white}- Languages     :${reset} Java, Dart, Python, JavaScript, TypeScript, SQL`,
     `${bold}${white}- Web & Mobile  :${reset} Flutter & Dart, Next.js, React, Node.js, Express`,
     `${bold}${white}- IoT & Systems :${reset} Arduino, ESP32, Wearables, SIH 2023 Campus Safety`,
     `${bold}${white}- Infrastructure:${reset} Linux Homelabs, Docker, n8n, Cloudflare, VPNs`,

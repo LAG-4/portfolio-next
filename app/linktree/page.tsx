@@ -18,7 +18,7 @@ export default function LinktreePage() {
       name: "GitHub",
       url: "https://github.com/lag-4",
       icon: Github,
-      desc: "Open source contributions, side projects, and mainframe utilities.",
+      desc: "Open source contributions, full-stack projects, and automation tools.",
       color: "group-hover:border-purple-500/50 group-hover:shadow-purple-500/10",
       iconColor: "text-purple-400"
     },

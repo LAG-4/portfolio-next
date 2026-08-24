@@ -18,12 +18,12 @@ export default function DynamicPage({ params }: Props) {
 
   const skillCategories = [
     {
-      title: "Mainframe & Databases",
+      title: "Observability & Incident Operations",
       skills: [
-        { name: "COBOL & JCL", details: "IBM z/OS" },
-        { name: "DB2", details: "Mainframe SQL" },
-        { name: "Java", details: "OOP & Enterprise" },
-        { name: "SQL", details: "RDBMS Design" }
+        { name: "Grafana", details: "Dashboard Monitoring" },
+        { name: "Splunk", details: "Log Monitoring" },
+        { name: "Incident Ticketing", details: "Issue & Downtime Reports" },
+        { name: "Team Escalation", details: "Incident Coordination" }
       ]
     },
     {
@@ -107,9 +107,9 @@ export default function DynamicPage({ params }: Props) {
               Who is Aryan? // Recruiter Synopsis
             </h3>
             <p className="text-zinc-200 text-base md:text-lg leading-relaxed font-normal">
-              I’m a <span className="font-semibold text-white">creator at heart</span> &mdash; a developer from Hyderabad, passionate about technology, UX, and building highly resilient real-world systems. I thrive on building, iterating, and shipping software—from highly optimized transactional COBOL/JCL scripts on legacy systems to modern AI-driven agentic architectures and high-density mobile apps.
+              I am a <span className="font-semibold text-white">developer and systems engineer</span> from Hyderabad who enjoys technology, UX, and practical software. At Infosys, I monitor Grafana and Splunk dashboards for IKEA web, app, and in-store systems, raise incident tickets, and report issues or downtime to the responsible teams.
               <br /><br />
-              My passion for real-world impact drives me to collaborate with talented engineering teams, adopt best practices extremely fast, and adapt to completely new tech stacks with ease. I would love to bring this blend of code, backend systems resilience, and AI creativity to help <span className="text-white font-bold">{company}</span> reach brand-new heights.
+              Alongside production monitoring and incident coordination, I build full-stack, mobile, and AI projects. I would bring that mix of operational awareness and product development experience to <span className="text-white font-bold">{company}</span>.
             </p>
           </motion.div>
         </section>
@@ -166,7 +166,7 @@ export default function DynamicPage({ params }: Props) {
         <section className="space-y-6">
           <div>
             <h3 className="text-2xl font-outfit font-extrabold text-white">Technical Skill Matrix</h3>
-            <p className="text-zinc-400 text-sm mt-1">Categorized expertise matching modern and legacy infrastructure demands.</p>
+            <p className="text-zinc-400 text-sm mt-1">Production operations, application development, AI, and infrastructure tools.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {skillCategories.map((cat, index) => (
@@ -204,7 +204,7 @@ export default function DynamicPage({ params }: Props) {
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-zinc-900 pb-4">
                 <div>
                   <h4 className="text-lg md:text-xl font-bold text-white">
-                    Systems Engineer (Mainframe Developer)
+                    Systems Engineer - IKEA Account
                   </h4>
                   <p className="text-zinc-400 text-xs font-mono uppercase mt-1">Infosys</p>
                 </div>
@@ -215,22 +215,22 @@ export default function DynamicPage({ params }: Props) {
               <ul className="space-y-3 text-sm md:text-base text-zinc-200">
                 <li className="flex items-start gap-3">
                   <span className="text-indigo-500 font-bold mt-1.5">-</span>
-                  <span>Specializing in mainframe application development, writing highly optimized COBOL and JCL scripts on IBM z/OS.</span>
+                  <span>Monitor Grafana and Splunk dashboards for IKEA web, app, and in-store systems.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-indigo-500 font-bold mt-1.5">-</span>
-                  <span>Completed comprehensive enterprise training in Java, SQL, and database management.</span>
+                  <span>Raise incident tickets when monitoring reveals an issue or service downtime.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-indigo-500 font-bold mt-1.5">-</span>
-                  <span>Maintaining, upgrading, and debugging mission-critical core database queries using DB2.</span>
+                  <span>Report incidents and relevant monitoring details to the responsible teams for investigation.</span>
                 </li>
               </ul>
               <div className="flex flex-wrap gap-2.5 pt-2">
-                <span className="text-[10px] font-mono font-semibold uppercase bg-zinc-900 border border-zinc-800 text-zinc-400 px-2.5 py-1 rounded-xl">COBOL</span>
-                <span className="text-[10px] font-mono font-semibold uppercase bg-zinc-900 border border-zinc-800 text-zinc-400 px-2.5 py-1 rounded-xl">JCL</span>
-                <span className="text-[10px] font-mono font-semibold uppercase bg-zinc-900 border border-zinc-800 text-zinc-400 px-2.5 py-1 rounded-xl">IBM z/OS</span>
-                <span className="text-[10px] font-mono font-semibold uppercase bg-zinc-900 border border-zinc-800 text-zinc-400 px-2.5 py-1 rounded-xl">DB2</span>
+                <span className="text-[10px] font-mono font-semibold uppercase bg-zinc-900 border border-zinc-800 text-zinc-400 px-2.5 py-1 rounded-xl">Grafana</span>
+                <span className="text-[10px] font-mono font-semibold uppercase bg-zinc-900 border border-zinc-800 text-zinc-400 px-2.5 py-1 rounded-xl">Splunk</span>
+                <span className="text-[10px] font-mono font-semibold uppercase bg-zinc-900 border border-zinc-800 text-zinc-400 px-2.5 py-1 rounded-xl">Monitoring</span>
+                <span className="text-[10px] font-mono font-semibold uppercase bg-zinc-900 border border-zinc-800 text-zinc-400 px-2.5 py-1 rounded-xl">Incident Ticketing</span>
               </div>
             </div>
 

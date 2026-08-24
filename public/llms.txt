@@ -1,6 +1,6 @@
 # Aryan Gupta Portfolio
 
-Aryan Gupta is a full-stack developer, AI engineer, and mainframe systems engineer based in India. This portfolio documents his experience, skills, shipped projects, awards, and contact options.
+Aryan Gupta is a systems engineer and full-stack developer based in India. At Infosys, he monitors Grafana and Splunk dashboards for IKEA web, app, and in-store systems, raises incident tickets, and reports issues or downtime to the responsible teams. This portfolio documents his experience, skills, shipped projects, awards, and contact options.
 
 ## Primary pages
 

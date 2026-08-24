@@ -49,7 +49,7 @@ export default function CliShowcase() {
             <div className="text-indigo-400 font-bold leading-normal text-xs md:text-sm overflow-x-auto whitespace-pre font-mono">
               {`═════════════════════════════════════════════════════════════════════════════\n`}
               {`                                 `} <span className="text-cyan-400">ARYAN GUPTA</span>{`\n`}
-              {`              `} <span className="text-white font-bold">Systems Engineer & Mainframe Developer @ Infosys</span>{`\n`}
+              {`              `} <span className="text-white font-bold">Systems Engineer, IKEA Account @ Infosys</span>{`\n`}
               {`                    `} <span className="text-zinc-500">Active Session // lagaryan.click/cli</span>{`\n`}
               {`═════════════════════════════════════════════════════════════════════════════`}
               <div className="mt-4 text-gray-400 font-mono">
