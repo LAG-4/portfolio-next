@@ -19,7 +19,11 @@ const homelabConsoleLogs = [
 ] as const;
 
 export default function RootHomePage() {
-  const visibleProjects = projectsData.slice(0, 4);
+  const nailbarClientProject = projectsData.find((project) => project.id === "nailbar-by-kritika");
+  const visibleProjects = [
+    ...projectsData.slice(0, 3),
+    ...(nailbarClientProject ? [nailbarClientProject] : []),
+  ];
   const commandText = "curl -L lagaryan.click";
 
   const experiences = [

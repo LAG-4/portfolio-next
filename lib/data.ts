@@ -16,32 +16,6 @@ export interface Project {
 /** Canonical portfolio project list ordered by current relevance. */
 export const projectsData: Project[] = [
     {
-        id: "nailbar-by-kritika",
-        title: "Nail Bar by Kritika",
-        tagline: "Client Website, Local SEO & Google Business Management",
-        description:
-            "Designed, built, and maintain the full-stack website for Nail Bar by Kritika, a nail salon and academy in Karnal. The site includes service landing pages, original guides, WhatsApp booking, galleries, structured data, and crawlable discovery files. I also set up and manage the Google Business Profile, with the business information and website optimized for local search and discoverability.",
-        metrics: [
-            "6 Search-focused Service Pages",
-            "6 Original Nail-care Guides",
-            "Google Business Profile Setup & Management",
-            "Local SEO, Structured Data & Sitemap",
-            "WhatsApp Booking & Google Maps Integration",
-        ],
-        techStack: [
-            "Next.js 16",
-            "React 19",
-            "TypeScript",
-            "CSS",
-            "JSON-LD",
-            "Vercel",
-            "Google Business Profile",
-        ],
-        recognition: "Client Project",
-        impactFocus: "Giving a local salon a fast, searchable booking site and a consistent presence across Google Search and Maps.",
-        liveLink: "https://nailbar-black.vercel.app",
-    },
-    {
         id: "learnai",
         title: "LearnAI",
         tagline: "Live on Play Store - Try Now! | Master AI Concepts & Stay Updated",
@@ -274,5 +248,31 @@ export const projectsData: Project[] = [
         impactFocus: "Hardware-software fusion",
         liveLink: "#",
         githubLink: "#",
+    },
+    {
+        id: "nailbar-by-kritika",
+        title: "Nail Bar by Kritika",
+        tagline: "Client Website, Local SEO & Google Business Management",
+        description:
+            "Designed, built, and maintain the full-stack website for Nail Bar by Kritika, a nail salon and academy in Karnal. The site includes service landing pages, original guides, WhatsApp booking, galleries, structured data, and crawlable discovery files. I also set up and manage the Google Business Profile, with the business information and website optimized for local search and discoverability.",
+        metrics: [
+            "6 Search-focused Service Pages",
+            "6 Original Nail-care Guides",
+            "Google Business Profile Setup & Management",
+            "Local SEO, Structured Data & Sitemap",
+            "WhatsApp Booking & Google Maps Integration",
+        ],
+        techStack: [
+            "Next.js 16",
+            "React 19",
+            "TypeScript",
+            "CSS",
+            "JSON-LD",
+            "Vercel",
+            "Google Business Profile",
+        ],
+        recognition: "Client Project",
+        impactFocus: "Giving a local salon a fast, searchable booking site and a consistent presence across Google Search and Maps.",
+        liveLink: "https://nailbar-black.vercel.app",
     },
 ];
