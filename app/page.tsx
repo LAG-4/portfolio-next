@@ -142,7 +142,7 @@ export default function RootHomePage() {
               Download Resume
             </a>
             <a 
-              href="mailto:contact@lagaryan.click" 
+              href="mailto:contact%40lagaryan.click"
               className="flex items-center gap-2 text-sm bg-zinc-900 hover:bg-zinc-800 text-white px-6 py-3.5 border border-zinc-800 rounded-2xl font-bold transition-all"
             >
               <Mail className="w-4 h-4" />
