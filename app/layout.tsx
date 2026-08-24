@@ -13,8 +13,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
-      <body className="antialiased">
+    <html
+      lang="en"
+      className="dark"
+      style={{ backgroundColor: "#070709", color: "#f4f4f6" }}
+    >
+      <body
+        className="antialiased"
+        style={{ margin: 0, backgroundColor: "#070709", color: "#f4f4f6" }}
+      >
         <ClientLayoutWrapper>{children}</ClientLayoutWrapper>
       </body>
     </html>
