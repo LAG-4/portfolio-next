@@ -1,0 +1,15 @@
+# Aryan Gupta Portfolio
+
+Aryan Gupta is a full-stack developer, AI engineer, and mainframe systems engineer based in India. This portfolio documents his experience, skills, shipped projects, awards, and contact options.
+
+## Primary pages
+
+- [Portfolio](https://www.lagaryan.click/): Experience, skills, selected projects, and contact links.
+- [Terminal portfolio](https://www.lagaryan.click/cli): Plain-text portfolio for terminal clients.
+- [Projects](https://www.lagaryan.click/#projects): Selected shipped work and source links.
+- [Privacy policy](https://www.lagaryan.click/privacy-policy): Analytics and privacy information.
+
+## Contact
+
+- [GitHub](https://github.com/LAG-4)
+- [Blog](https://blog.lagaryan.click)

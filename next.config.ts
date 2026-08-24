@@ -25,6 +25,28 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
   },
+
+  async rewrites() {
+    return {
+      beforeFiles: [
+        {
+          source: '/',
+          destination: '/cli',
+          has: [{ type: 'query', key: 'cli', value: '1' }],
+        },
+        {
+          source: '/',
+          destination: '/cli',
+          has: [{ type: 'header', key: 'user-agent', value: '.*curl/.*' }],
+        },
+        {
+          source: '/',
+          destination: '/cli',
+          has: [{ type: 'header', key: 'accept', value: '.*text/plain.*' }],
+        },
+      ],
+    };
+  },
 };
 
 export default nextConfig;
