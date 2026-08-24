@@ -23,7 +23,6 @@ const nextConfig: NextConfig = {
   
   // Experimental optimizations
   experimental: {
-    inlineCss: true,
     optimizePackageImports: [
       '@icons-pack/react-simple-icons',
       'lucide-react',
