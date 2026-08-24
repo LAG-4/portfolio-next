@@ -2,21 +2,9 @@ import Link from "next/link";
 import { SiGithub as Github } from "@icons-pack/react-simple-icons";
 import { 
   ExternalLink, Award, Mail, FileText,
-  Cpu, Server, ToggleLeft, ToggleRight, GraduationCap, MapPin, Terminal
+  Cpu, GraduationCap, MapPin, Terminal
 } from "lucide-react";
 import { projectsData } from "@/lib/data";
-
-const homelabServices = [
-  { id: "jellyfin", name: "Jellyfin Streamer", running: true },
-  { id: "immich", name: "Immich Backups", running: true },
-  { id: "n8n", name: "n8n Automation", running: false },
-] as const;
-
-const homelabConsoleLogs = [
-  "pi-server login: aryangpt",
-  "Tailscale link active (100.82.11.90)",
-  "Ready for micro-service signals.",
-] as const;
 
 export default function RootHomePage() {
   const nailbarClientProject = projectsData.find((project) => project.id === "nailbar-by-kritika");
@@ -457,78 +445,11 @@ export default function RootHomePage() {
           </div>
         </section>
 
-        {/* INTERACTIVE FUN WIDGET: Raspberry Pi Homelab Console */}
-        <section className="defer-below-fold space-y-8 border-t border-zinc-900 pt-16">
-          <div className="bg-zinc-950/80 border border-zinc-900 p-6 md:p-8 rounded-3xl flex flex-col md:flex-row gap-8 items-stretch">
-            
-            {/* Widget left column (Status telemetry) */}
-            <div className="flex-1 space-y-6">
-              <div className="flex items-center gap-3">
-                <Server className="w-6 h-6 text-indigo-400" />
-                <div>
-                  <h3 className="text-base font-bold text-white">Pi Homelab Console</h3>
-                  <p className="text-xs text-zinc-400 font-mono">pi-cluster.local // active</p>
-                </div>
-              </div>
-
-              {/* Dynamic telemetry stats */}
-              <div className="grid grid-cols-3 gap-3">
-                <div className="bg-[#0b0b0e] border border-zinc-900 p-3 rounded-2xl text-center">
-                  <span className="text-[10px] font-mono text-zinc-400 uppercase block font-semibold">CPU</span>
-                  <span className="text-sm md:text-base font-mono font-bold text-indigo-400">12%</span>
-                </div>
-                <div className="bg-[#0b0b0e] border border-zinc-900 p-3 rounded-2xl text-center">
-                  <span className="text-[10px] font-mono text-zinc-400 uppercase block font-semibold">RAM</span>
-                  <span className="text-sm md:text-base font-mono font-bold text-emerald-400">48%</span>
-                </div>
-                <div className="bg-[#0b0b0e] border border-zinc-900 p-3 rounded-2xl text-center">
-                  <span className="text-[10px] font-mono text-zinc-400 uppercase block font-semibold">TEMP</span>
-                  <span className="text-sm md:text-base font-mono font-bold text-red-400">42°C</span>
-                </div>
-              </div>
-
-              {/* Service triggers */}
-              <div className="space-y-3 border-t border-zinc-900 pt-4">
-                <span className="text-xs font-mono text-zinc-400 uppercase tracking-wider block font-bold">Services Switchboard</span>
-                <div className="space-y-2">
-                  {homelabServices.map((service) => (
-                    <div key={service.id} className="flex justify-between items-center bg-[#0b0b0e] px-4 py-2.5 border border-zinc-900 rounded-xl">
-                      <span className="text-xs font-semibold text-zinc-200 flex items-center gap-2">
-                        <span className={`w-2 h-2 rounded-full ${service.running ? "bg-emerald-500" : "bg-red-500"}`} />
-                        {service.name}
-                      </span>
-                      <span
-                        className={`text-sm p-1 rounded font-mono ${service.running ? "text-indigo-400" : "text-zinc-400"}`}
-                        role="img"
-                        aria-label={`${service.name} is ${service.running ? "running" : "stopped"}`}
-                      >
-                        {service.running ? <ToggleRight className="w-6 h-6" /> : <ToggleLeft className="w-6 h-6" />}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-            </div>
-
-            {/* Widget right column (System logs output) */}
-            <div className="flex-1 bg-black border border-zinc-900 rounded-3xl p-6 flex flex-col justify-between font-mono text-xs text-indigo-300 min-h-[220px] shadow-inner">
-              <div className="space-y-2 overflow-hidden">
-                <span className="text-zinc-400 block text-[10px] font-bold border-b border-zinc-900 pb-2 mb-2">=== TERMINAL CONSOLE LOGS ===</span>
-                {homelabConsoleLogs.map((log) => (
-                  <div key={log} className="line-clamp-1 leading-relaxed">
-                    {log}
-                  </div>
-                ))}
-              </div>
-              <div className="text-zinc-400 text-[10px] mt-4 flex justify-between border-t border-zinc-900 pt-2 font-bold">
-                <span>PORT: 8080</span>
-                <span>STATUS: OK</span>
-              </div>
-            </div>
-
-          </div>
-        </section>
+        <footer className="defer-below-fold border-t border-zinc-900 pt-16 overflow-hidden">
+          <p className="whitespace-nowrap text-[clamp(2.75rem,11vw,8rem)] leading-none font-outfit font-extrabold tracking-[-0.06em] text-white">
+            ARYAN GUPTA
+          </p>
+        </footer>
 
       </main>
 
