@@ -1,6 +1,6 @@
 import { ansi, link, drawBox, streamLinesResponse } from '@/lib/ansi';
 
-export const runtime = 'nodejs';
+export const runtime = 'edge';
 
 export async function GET(request: Request) {
   const { bold, reset, dim, white, gray } = ansi;
