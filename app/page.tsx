@@ -285,7 +285,7 @@ export default function RootHomePage() {
             <div>
               <h2 className="text-3xl font-outfit font-extrabold text-white">Selected Projects</h2>
               <p className="text-zinc-300 text-base md:text-lg mt-1.5 leading-relaxed">
-                Curated items built in full-stack dev, hackathons, and AI pipelines.
+                Client work, full-stack products, hackathon builds, and AI tools.
               </p>
             </div>
           </div>

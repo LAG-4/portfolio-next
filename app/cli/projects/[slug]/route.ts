@@ -1,6 +1,11 @@
 import { ansi, link } from '@/lib/ansi';
 
 const PROJECTS: Record<string, { name: string; desc: string; url: string } > = {
+  'nailbar-by-kritika': {
+    name: 'Nail Bar by Kritika',
+    desc: 'Full-stack client website with service pages, guides, WhatsApp booking, local SEO, and Google Business Profile management.',
+    url: 'https://nailbar-black.vercel.app',
+  },
   'learnai': {
     name: 'LearnAI',
     desc: 'Flutter app to master AI concepts with structured learning and real-time industry updates; deployed on Google Play Store.',

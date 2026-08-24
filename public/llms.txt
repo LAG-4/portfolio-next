@@ -7,6 +7,7 @@ Aryan Gupta is a systems engineer and full-stack developer based in India. At In
 - [Portfolio](https://www.lagaryan.click/): Experience, skills, selected projects, and contact links.
 - [Terminal portfolio](https://www.lagaryan.click/cli): Plain-text portfolio for terminal clients.
 - [Projects](https://www.lagaryan.click/#projects): Selected shipped work and source links.
+- [Nail Bar by Kritika](https://www.lagaryan.click/projects/nailbar-by-kritika): Client website, local SEO, and Google Business Profile work for a nail salon and academy in Karnal.
 - [Privacy policy](https://www.lagaryan.click/privacy-policy): Analytics and privacy information.
 
 ## Contact

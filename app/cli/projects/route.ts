@@ -6,6 +6,9 @@ export async function GET() {
   const { bold, reset, primary, dim, white } = ansi;
 
   const projectLines = [
+    `${bold}${white}- Nail Bar by Kritika${reset} - ${dim}Client website and local search presence${reset}`,
+    `  Next.js 16, local SEO & Google Business | Site: ${link('nailbar', 'https://nailbar-black.vercel.app')}`,
+    ``,
     `${bold}${white}- LearnAI (Play Store App)${reset} - ${dim}Active Learning & gamified tech curriculum${reset}`,
     `  Flutter & Firestore RDBMS | Play Store link: ${link('Play Store', 'https://play.google.com/store/apps/details?id=com.lagaryan.learnai')}`,
     ``,

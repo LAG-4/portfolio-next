@@ -283,11 +283,38 @@ export default function DynamicPage({ params }: Props) {
             <p className="text-zinc-400 text-sm mt-1">Key applications shipped with measurable performance metrics.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+            {/* Nail Bar by Kritika */}
+            <div className="bg-[#0c0c0f]/80 border border-zinc-900 p-6 rounded-3xl space-y-4 hover:border-zinc-800 transition-colors">
+              <div className="flex justify-between items-start gap-3">
+                <span className="text-xs font-mono text-zinc-500 font-semibold tracking-wider">PROJECT_01 // CLIENT_WEB</span>
+                <span className="text-[9px] font-mono font-bold uppercase bg-indigo-500/10 text-indigo-400 px-2 py-0.5 rounded border border-indigo-500/20">
+                  Client Project
+                </span>
+              </div>
+              <h4 className="text-lg font-bold text-white">Nail Bar by Kritika</h4>
+              <p className="text-zinc-300 text-sm leading-relaxed">
+                Built and maintain a full-stack website for a Karnal nail salon and academy. The work includes service pages, original guides, WhatsApp booking, structured data, local SEO, and Google Business Profile management.
+              </p>
+              <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-zinc-900">
+                <span className="text-xs bg-zinc-950 border border-zinc-900 text-zinc-300 px-3 py-1 rounded-xl">Next.js 16</span>
+                <span className="text-xs bg-zinc-950 border border-zinc-900 text-zinc-300 px-3 py-1 rounded-xl">Local SEO</span>
+                <span className="text-xs bg-zinc-950 border border-zinc-900 text-zinc-300 px-3 py-1 rounded-xl">Google Business</span>
+                <a
+                  href="https://nailbar-black.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 hover:text-white px-3 py-1 rounded-xl transition-colors"
+                >
+                  View live site
+                </a>
+              </div>
+            </div>
             
             {/* Gaia's Touch */}
             <div className="bg-[#0c0c0f]/80 border border-zinc-900 p-6 rounded-3xl space-y-4 hover:border-zinc-800 transition-colors">
               <div className="flex justify-between items-start">
-                <span className="text-xs font-mono text-zinc-500 font-semibold tracking-wider">PROJECT_01 // GAIA</span>
+                <span className="text-xs font-mono text-zinc-500 font-semibold tracking-wider">PROJECT_02 // GAIA</span>
               </div>
               <h4 className="text-lg font-bold text-white">Gaia’s Touch</h4>
               <p className="text-zinc-300 text-sm leading-relaxed">
@@ -302,7 +329,7 @@ export default function DynamicPage({ params }: Props) {
             {/* SheSafe */}
             <div className="bg-[#0c0c0f]/80 border border-zinc-900 p-6 rounded-3xl space-y-4 hover:border-zinc-800 transition-colors">
               <div className="flex justify-between items-start">
-                <span className="text-xs font-mono text-zinc-500 font-semibold tracking-wider">PROJECT_02 // SHESAFE</span>
+                <span className="text-xs font-mono text-zinc-500 font-semibold tracking-wider">PROJECT_03 // SHESAFE</span>
                 <span className="text-[9px] font-mono font-bold uppercase bg-indigo-500/10 text-indigo-400 px-2 py-0.5 rounded border border-indigo-500/20">
                   SIH Champion
                 </span>
@@ -321,7 +348,7 @@ export default function DynamicPage({ params }: Props) {
             {/* AI Insights Agent */}
             <div className="bg-[#0c0c0f]/80 border border-zinc-900 p-6 rounded-3xl space-y-4 hover:border-zinc-800 transition-colors">
               <div className="flex justify-between items-start">
-                <span className="text-xs font-mono text-zinc-500 font-semibold tracking-wider">PROJECT_03 // DATA_AI</span>
+                <span className="text-xs font-mono text-zinc-500 font-semibold tracking-wider">PROJECT_04 // DATA_AI</span>
               </div>
               <h4 className="text-lg font-bold text-white">AI Insights Agent</h4>
               <p className="text-zinc-300 text-sm leading-relaxed">
@@ -337,7 +364,7 @@ export default function DynamicPage({ params }: Props) {
             {/* Voice-Controlled Car */}
             <div className="bg-[#0c0c0f]/80 border border-zinc-900 p-6 rounded-3xl space-y-4 hover:border-zinc-800 transition-colors">
               <div className="flex justify-between items-start">
-                <span className="text-xs font-mono text-zinc-500 font-semibold tracking-wider">PROJECT_04 // HARDWARE</span>
+                <span className="text-xs font-mono text-zinc-500 font-semibold tracking-wider">PROJECT_05 // HARDWARE</span>
               </div>
               <h4 className="text-lg font-bold text-white">Voice-Controlled IoT Vehicle</h4>
               <p className="text-zinc-300 text-sm leading-relaxed">
