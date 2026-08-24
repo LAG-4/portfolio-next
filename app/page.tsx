@@ -1,6 +1,7 @@
 import Link from "next/link";
+import { SiGithub as Github } from "@icons-pack/react-simple-icons";
 import { 
-  Github, ExternalLink, Award, Mail, FileText, 
+  ExternalLink, Award, Mail, FileText,
   Cpu, Server, ToggleLeft, ToggleRight, GraduationCap, MapPin, Terminal
 } from "lucide-react";
 import { projectsData } from "@/lib/data";
@@ -422,7 +423,7 @@ export default function RootHomePage() {
               </div>
 
               <div className="space-y-2 border-t border-zinc-900/60 pt-4 text-xs md:text-sm text-zinc-400 font-mono">
-                <div>Welcome to Aryan Gupta's Command Line Portfolio Hub.</div>
+                <div>Welcome to Aryan Gupta’s Command Line Portfolio Hub.</div>
                 <div className="flex items-center gap-2">
                   <span className="text-emerald-400">?</span> Loading remote modules... <span className="text-emerald-500 font-bold">Done.</span>
                 </div>

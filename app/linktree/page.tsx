@@ -1,8 +1,15 @@
 "use client";
 
 import React from "react";
+import {
+  SiGithub as Github,
+  SiInstagram as Instagram,
+  SiX as Twitter,
+  SiYoutube as Youtube,
+} from "@icons-pack/react-simple-icons";
+import { LinkedInIcon } from "@/components/icons/linkedin-icon";
 import { 
-  Instagram, Youtube, Github, Twitter, Linkedin, Mail, Share2, ArrowUpRight 
+  Mail, Share2, ArrowUpRight
 } from "lucide-react";
 
 export default function LinktreePage() {
@@ -18,7 +25,7 @@ export default function LinktreePage() {
     {
       name: "LinkedIn",
       url: "https://www.linkedin.com/in/aryan-gupta4203/",
-      icon: Linkedin,
+      icon: LinkedInIcon,
       desc: "Professional experience, industry networking, and enterprise updates.",
       color: "group-hover:border-blue-500/50 group-hover:shadow-blue-500/10",
       iconColor: "text-blue-400"

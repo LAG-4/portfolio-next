@@ -54,12 +54,8 @@ const YOUTUBE_VIDEOS: VideoItem[] = [
 ];
 
 export default function EditingPortfolioPage() {
-  const [videos, setVideos] = useState<VideoItem[]>([]);
+  const [videos] = useState<VideoItem[]>(YOUTUBE_VIDEOS);
   const [modalVideo, setModalVideo] = useState<VideoItem | null>(null);
-
-  useEffect(() => {
-    setVideos(YOUTUBE_VIDEOS);
-  }, []);
 
   useEffect(() => {
     if (modalVideo) {

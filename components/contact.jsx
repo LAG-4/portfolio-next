@@ -1,7 +1,12 @@
 'use client'
 
 import { motion } from 'motion/react';
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowUpRight } from "lucide-react";
+import {
+    SiGithub as Github,
+    SiX as Twitter,
+} from "@icons-pack/react-simple-icons";
+import { LinkedInIcon } from "@/components/icons/linkedin-icon";
+import { Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
 
 const contactInfo = [
     { icon: Mail, label: "Email", value: "aryangupta4feb@gmail.com", href: "mailto:aryangupta4feb@gmail.com" },
@@ -11,7 +16,7 @@ const contactInfo = [
 
 const socials = [
     { icon: Github, label: "GitHub", href: "https://github.com/LAG-4" },
-    { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/aryan-gupta4203/" },
+    { icon: LinkedInIcon, label: "LinkedIn", href: "https://www.linkedin.com/in/aryan-gupta4203/" },
     { icon: Twitter, label: "Twitter", href: "https://x.com/lag_aryan" },
 ];
 
@@ -31,7 +36,7 @@ export default function Contact() {
                     className="text-center mb-12"
                 >
                     <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-3">
-                        Let's Connect
+                        Let’s Connect
                     </p>
                     <h2 className="text-3xl md:text-4xl font-bold mb-4">
                         Get In Touch
@@ -133,14 +138,14 @@ export default function Contact() {
                     className="text-center mt-16"
                 >
                     <p className="text-muted-foreground text-sm italic mb-6">
-                        "I'm always looking for the next interesting problem to solve."
+                        “I’m always looking for the next interesting problem to solve.”
                     </p>
                     <a 
                         href="mailto:aryangupta4feb@gmail.com"
                         className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-accent-foreground font-semibold hover:bg-accent/90 transition-colors"
                     >
                         <Mail className="w-4 h-4" />
-                        Let's Work Together
+                        Let’s Work Together
                     </a>
                 </motion.div>
 

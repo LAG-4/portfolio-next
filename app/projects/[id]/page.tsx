@@ -1,7 +1,7 @@
 import { projectsData } from "@/lib/data";
-import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
-import { ArrowLeft, Github, ExternalLink, Cpu, Sparkles, Award, Layers, Globe } from "lucide-react";
+import { SiGithub as Github } from "@icons-pack/react-simple-icons";
+import { ArrowLeft, ExternalLink, Cpu, Sparkles, Layers, Globe } from "lucide-react";
 
 export async function generateStaticParams() {
   return projectsData.map((project) => ({

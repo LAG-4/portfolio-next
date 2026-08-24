@@ -4,7 +4,8 @@
 import { motion } from 'motion/react';
 import { projectsData } from "@/lib/data";
 import Link from "next/link";
-import { Github, ExternalLink, Award } from "lucide-react";
+import { SiGithub as Github } from "@icons-pack/react-simple-icons";
+import { ExternalLink, Award } from "lucide-react";
 
 export default function ProjectSection() {
   return (

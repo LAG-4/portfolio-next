@@ -53,7 +53,7 @@ export default function CliShowcase() {
               {`                    `} <span className="text-zinc-500">Active Session // lagaryan.click/cli</span>{`\n`}
               {`═════════════════════════════════════════════════════════════════════════════`}
               <div className="mt-4 text-gray-400 font-mono">
-                Welcome to Aryan Gupta's Command Line Portfolio Hub.
+                Welcome to Aryan Gupta’s Command Line Portfolio Hub.
               </div>
               <div className="font-mono mt-1">
                 <span className="text-green-400 font-bold">?</span> Loading remote modules... <span className="text-green-500 font-bold">Done.</span>

@@ -1,12 +1,10 @@
 "use client";
 
 import React, { use } from "react";
-import Link from "next/link";
 import { motion } from "motion/react";
 import { 
-  Award, Briefcase, Cpu, GraduationCap, Mail, Github, FileText, Globe, ExternalLink, MapPin
+  Award, GraduationCap, Globe, MapPin
 } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -17,7 +15,6 @@ export default function DynamicPage({ params }: Props) {
     return slug.charAt(0).toUpperCase() + slug.slice(1);
   }
   const company = formatCompany(slug);
-  const companyUpper = slug.toUpperCase();
 
   const skillCategories = [
     {
@@ -91,10 +88,10 @@ export default function DynamicPage({ params }: Props) {
               EXCLUSIVE CANDIDACY PITCH
             </span>
             <h1 className="text-4xl md:text-6xl font-outfit font-extrabold tracking-tight text-white leading-none">
-              Hey, I'm Aryan Gupta
+              Hey, I’m Aryan Gupta
             </h1>
             <h2 className="text-xl md:text-3xl font-medium mt-3 text-zinc-300 font-sans">
-              and I'd love to build the future of technology at <span className="text-indigo-400 font-bold underline decoration-indigo-500 decoration-2">{company}!</span>
+              and I’d love to build the future of technology at <span className="text-indigo-400 font-bold underline decoration-indigo-500 decoration-2">{company}!</span>
             </h2>
           </motion.div>
 
@@ -110,7 +107,7 @@ export default function DynamicPage({ params }: Props) {
               Who is Aryan? // Recruiter Synopsis
             </h3>
             <p className="text-zinc-200 text-base md:text-lg leading-relaxed font-normal">
-              I'm a <span className="font-semibold text-white">creator at heart</span> &mdash; a developer from Hyderabad, passionate about technology, UX, and building highly resilient real-world systems. I thrive on building, iterating, and shipping software—from highly optimized transactional COBOL/JCL scripts on legacy systems to modern AI-driven agentic architectures and high-density mobile apps.
+              I’m a <span className="font-semibold text-white">creator at heart</span> &mdash; a developer from Hyderabad, passionate about technology, UX, and building highly resilient real-world systems. I thrive on building, iterating, and shipping software—from highly optimized transactional COBOL/JCL scripts on legacy systems to modern AI-driven agentic architectures and high-density mobile apps.
               <br /><br />
               My passion for real-world impact drives me to collaborate with talented engineering teams, adopt best practices extremely fast, and adapt to completely new tech stacks with ease. I would love to bring this blend of code, backend systems resilience, and AI creativity to help <span className="text-white font-bold">{company}</span> reach brand-new heights.
             </p>
@@ -292,7 +289,7 @@ export default function DynamicPage({ params }: Props) {
               <div className="flex justify-between items-start">
                 <span className="text-xs font-mono text-zinc-500 font-semibold tracking-wider">PROJECT_01 // GAIA</span>
               </div>
-              <h4 className="text-lg font-bold text-white">Gaia's Touch</h4>
+              <h4 className="text-lg font-bold text-white">Gaia’s Touch</h4>
               <p className="text-zinc-300 text-sm leading-relaxed">
                 Integrated Flutter application designed to connect local NGOs. Drove 10,000+ client engagements and successfully increased overall donations by 50% through high-impact UX.
               </p>
@@ -366,7 +363,7 @@ export default function DynamicPage({ params }: Props) {
               <Award className="w-5 h-5 text-indigo-400" />
               <h4 className="font-bold text-white text-sm md:text-base">SIH 2023 National Champion</h4>
               <p className="text-zinc-300 text-xs md:text-sm">
-                First Place Winner of the Smart India Hackathon 2023 under the Women's Safety App theme.
+                First Place Winner of the Smart India Hackathon 2023 under the Women’s Safety App theme.
               </p>
             </div>
             <div className="bg-[#0c0c0f]/80 border border-zinc-900 p-6 rounded-3xl space-y-3">

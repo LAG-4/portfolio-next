@@ -178,7 +178,7 @@ export default function PrivacyPolicyPage() {
               <p>
                 Cookies are files with a small amount of data that are commonly used as
                 anonymous unique identifiers. These are sent to your browser from the
-                websites that you visit and are stored on your device's internal
+                websites that you visit and are stored on your device’s internal
                 memory.
               </p>
               <p>
@@ -230,7 +230,7 @@ export default function PrivacyPolicyPage() {
 
             <div className="space-y-3 pt-4 border-t border-zinc-900/60">
               <h2 className="text-white font-bold text-sm md:text-base">
-                8. Children's Privacy
+                8. Children’s Privacy
               </h2>
               <p>
                 These Services do not address anyone under the age of 13. We do not

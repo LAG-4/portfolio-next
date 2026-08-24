@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import { Terminal, Cpu, Database, HelpCircle, Power, Play, Search } from "lucide-react";
+import { Cpu, Database, HelpCircle, Power, Play } from "lucide-react";
 
 export function CRTMainframe() {
   const [input, setInput] = useState("");

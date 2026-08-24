@@ -23,7 +23,11 @@ const nextConfig: NextConfig = {
   
   // Experimental optimizations
   experimental: {
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
+    optimizePackageImports: [
+      '@icons-pack/react-simple-icons',
+      'lucide-react',
+      '@radix-ui/react-icons',
+    ],
   },
 
   async rewrites() {

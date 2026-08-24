@@ -63,9 +63,9 @@ export default function About() {
               My Story
             </div>
             <p className="leading-relaxed text-foreground/80 mt-2">
-              I'm Aryan, a Computer Science student who turns caffeine into code.
+              I’m Aryan, a Computer Science student who turns caffeine into code.
               I specialize in building full-stack applications and integrating AI agents
-              to solve real-world problems. I'm passionate about creating seamless
+              to solve real-world problems. I’m passionate about creating seamless
               user experiences and shipping high-quality software that makes a difference.
             </p>
           </motion.div>

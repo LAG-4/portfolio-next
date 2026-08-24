@@ -1,6 +1,6 @@
 import { ansi, link, drawBox, streamLinesResponse } from '@/lib/ansi';
 
-export const runtime = 'edge';
+export const runtime = 'nodejs';
 
 function banner() {
   const { bold, primary, secondary, reset, white, dim } = ansi;

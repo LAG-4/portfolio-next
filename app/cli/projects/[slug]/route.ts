@@ -1,6 +1,6 @@
 import { ansi, link } from '@/lib/ansi';
 
-export const runtime = 'edge';
+export const runtime = 'nodejs';
 
 const PROJECTS: Record<string, { name: string; desc: string; url: string } > = {
   'learnai': {

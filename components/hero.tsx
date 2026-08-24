@@ -16,8 +16,6 @@ function useTypewriter(text: string, speed: number = 100) {
 
   useEffect(() => {
     let i = 0;
-    setDisplayed("");
-    setIsComplete(false);
     
     const interval = setInterval(() => {
       if (i < text.length) {
@@ -80,7 +78,7 @@ export default function Hero() {
 
           {/* Tagline */}
           <p className="text-muted-foreground text-lg md:text-xl mb-8 max-w-lg italic">
-            "Building tomorrow's tech today — shipping products that matter."
+            “Building tomorrow’s tech today — shipping products that matter.”
           </p>
 
           {/* Key highlights */}
