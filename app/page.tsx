@@ -141,13 +141,13 @@ export default function RootHomePage() {
               <FileText className="w-4 h-4" />
               Download Resume
             </a>
-            <a 
-              href="mailto:contact%40lagaryan.click"
+            <Link
+              href="/linktree"
               className="flex items-center gap-2 text-sm bg-zinc-900 hover:bg-zinc-800 text-white px-6 py-3.5 border border-zinc-800 rounded-2xl font-bold transition-all"
             >
               <Mail className="w-4 h-4" />
               Email Me
-            </a>
+            </Link>
             <a 
               href="https://github.com/LAG-4" 
               target="_blank" 
