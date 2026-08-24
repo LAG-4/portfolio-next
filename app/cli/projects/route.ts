@@ -1,8 +1,8 @@
-import { ansi, link, drawBox, streamLinesResponse } from '@/lib/ansi';
+import { ansi, link, drawBox, terminalLinesResponse } from '@/lib/ansi';
 
-export const runtime = 'edge';
+export const dynamic = 'force-static';
 
-export async function GET(request: Request) {
+export async function GET() {
   const { bold, reset, primary, dim, white } = ansi;
 
   const projectLines = [
@@ -31,5 +31,5 @@ export async function GET(request: Request) {
     `${dim}Tip: visit the main website for interactive demonstrations and live stats.${reset}`
   ].join('\n').split('\n');
 
-  return streamLinesResponse(content, request);
+  return terminalLinesResponse(content);
 }

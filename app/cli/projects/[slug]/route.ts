@@ -1,7 +1,5 @@
 import { ansi, link } from '@/lib/ansi';
 
-export const runtime = 'edge';
-
 const PROJECTS: Record<string, { name: string; desc: string; url: string } > = {
   'learnai': {
     name: 'LearnAI',
@@ -35,11 +33,16 @@ const PROJECTS: Record<string, { name: string; desc: string; url: string } > = {
   },
 };
 
-export async function GET(req: Request) {
+export function generateStaticParams() {
+  return Object.keys(PROJECTS).map((slug) => ({ slug }));
+}
+
+export async function GET(
+  _request: Request,
+  { params }: { params: Promise<{ slug: string }> },
+) {
   const { bold, reset, dim, cyan } = ansi;
-  const { pathname } = new URL(req.url);
-  const parts = pathname.split('/').filter(Boolean);
-  const slug = parts[parts.length - 1];
+  const { slug } = await params;
   const p = PROJECTS[slug];
   if (!p) {
     const lines = [

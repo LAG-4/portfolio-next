@@ -1,6 +1,6 @@
-import { ansi, link, drawBox, streamLinesResponse } from '@/lib/ansi';
+import { ansi, link, drawBox, terminalLinesResponse } from '@/lib/ansi';
 
-export const runtime = 'edge';
+export const dynamic = 'force-static';
 
 function banner() {
   const { bold, primary, secondary, reset, white, dim } = ansi;
@@ -12,19 +12,11 @@ function banner() {
 }
 
 
-export async function GET(request: Request) {
+export async function GET() {
   const { bold, reset, dim, primary, secondary, highlight, success, white, gray } = ansi;
   const site = 'https://www.lagaryan.click';
 
-  // Calculate live IST timestamp
-  const now = new Date();
-  const istString = now.toLocaleTimeString('en-GB', { 
-    timeZone: 'Asia/Kolkata', 
-    hour: '2-digit', 
-    minute: '2-digit', 
-    second: '2-digit' 
-  });
-  const timeString = `${istString} IST`;
+  const timeString = 'IST (UTC+05:30)';
 
   // Telemetry details inside a clean standard card to guarantee exact alignment
   const telemetryLines = [
@@ -96,5 +88,5 @@ export async function GET(request: Request) {
 
   const allLines = [...bannerLines, ...bodyText];
 
-  return streamLinesResponse(allLines, request);
+  return terminalLinesResponse(allLines);
 }

@@ -1,8 +1,8 @@
-import { ansi, drawBox, streamLinesResponse } from '@/lib/ansi';
+import { ansi, drawBox, terminalLinesResponse } from '@/lib/ansi';
 
-export const runtime = 'edge';
+export const dynamic = 'force-static';
 
-export async function GET(request: Request) {
+export async function GET() {
   const { bold, reset, highlight, dim, white } = ansi;
 
   const skillLines = [
@@ -25,5 +25,5 @@ export async function GET(request: Request) {
     `${dim}Run "curl -L lagaryan.click/cli" to see the rating matrix progress indicators.${reset}`
   ].join('\n').split('\n');
 
-  return streamLinesResponse(content, request);
+  return terminalLinesResponse(content);
 }

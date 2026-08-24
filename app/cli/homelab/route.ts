@@ -1,8 +1,8 @@
-import { ansi, drawBox, streamLinesResponse } from '@/lib/ansi';
+import { ansi, drawBox, terminalLinesResponse } from '@/lib/ansi';
 
-export const runtime = 'edge';
+export const dynamic = 'force-static';
 
-export async function GET(request: Request) {
+export async function GET() {
   const { bold, reset, primary, dim, white, success } = ansi;
 
   const homelabLines = [
@@ -27,5 +27,5 @@ export async function GET(request: Request) {
     `${dim}Homelab builds are reproducible via custom docker-compose YAML pipelines.${reset}`
   ].join('\n').split('\n');
 
-  return streamLinesResponse(content, request);
+  return terminalLinesResponse(content);
 }

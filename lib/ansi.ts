@@ -57,61 +57,12 @@ export function drawBox(title: string, lines: string[], width: number = 72, colo
   return [topBar, ...body, bottomBar].join('\n');
 }
 
-export function getLineDelay(line: string): number {
-  const clean = line
-    .replace(/\x1b\[[0-9;]*m/g, '')
-    .replace(/\x1b\]8;;.*?\x07/g, '')
-    .trim();
-  
-  if (clean === '') return 5;
-  
-  const isBoxBorder = /^[┌└├│─\s┼┤┬┴┼─]+$/.test(clean) || 
-                      clean.startsWith('┌─') || 
-                      clean.startsWith('└─') || 
-                      clean.startsWith('├─') ||
-                      clean.startsWith('│');
-                      
-  if (isBoxBorder) return 5;
-  
-  return 30;
-}
-
-export function streamLinesResponse(lines: string[], request: Request): Response {
-  const url = new URL(request.url);
-  const isFast = url.searchParams.has('fast') || 
-                 url.searchParams.has('skip') || 
-                 url.searchParams.has('raw') || 
-                 url.searchParams.get('fast') === '1' || 
-                 url.searchParams.get('skip') === '1';
-
-  if (isFast) {
-    return new Response(lines.join('\n') + '\n', {
-      headers: {
-        'Content-Type': 'text/plain; charset=utf-8',
-        'Cache-Control': 'no-store',
-      },
-    });
-  }
-
-  const encoder = new TextEncoder();
-  const stream = new ReadableStream({
-    async start(controller) {
-      for (const line of lines) {
-        controller.enqueue(encoder.encode(line + '\n'));
-        const delay = getLineDelay(line);
-        await new Promise(resolve => setTimeout(resolve, delay));
-      }
-      controller.close();
-    }
-  });
-
-  return new Response(stream, {
+export function terminalLinesResponse(lines: string[]): Response {
+  return new Response(lines.join('\n') + '\n', {
     headers: {
       'Content-Type': 'text/plain; charset=utf-8',
-      'Transfer-Encoding': 'chunked',
-      'Cache-Control': 'no-store',
+      'Cache-Control': 'public, max-age=0, s-maxage=86400, stale-while-revalidate=604800',
     },
   });
 }
-
 

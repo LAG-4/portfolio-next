@@ -1,8 +1,8 @@
-import { ansi, drawBox, streamLinesResponse } from '@/lib/ansi';
+import { ansi, drawBox, terminalLinesResponse } from '@/lib/ansi';
 
-export const runtime = 'edge';
+export const dynamic = 'force-static';
 
-export async function GET(request: Request) {
+export async function GET() {
   const { bold, reset, secondary, dim, white, primary, success } = ansi;
 
   const expLines = [
@@ -32,5 +32,5 @@ export async function GET(request: Request) {
     `${dim}Backups, certificates, and academic transcripts available upon request.${reset}`
   ].join('\n').split('\n');
 
-  return streamLinesResponse(content, request);
+  return terminalLinesResponse(content);
 }

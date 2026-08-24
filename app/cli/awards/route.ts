@@ -1,8 +1,8 @@
-import { ansi, drawBox, streamLinesResponse } from '@/lib/ansi';
+import { ansi, drawBox, terminalLinesResponse } from '@/lib/ansi';
 
-export const runtime = 'edge';
+export const dynamic = 'force-static';
 
-export async function GET(request: Request) {
+export async function GET() {
   const { bold, reset, highlight, dim, white } = ansi;
 
   const awardLines = [
@@ -28,5 +28,5 @@ export async function GET(request: Request) {
     `${dim}Detailed hackathon portfolios, photos, and diplomas are available on requests.${reset}`
   ].join('\n').split('\n');
 
-  return streamLinesResponse(content, request);
+  return terminalLinesResponse(content);
 }

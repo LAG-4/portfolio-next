@@ -1,8 +1,8 @@
-import { ansi, link, drawBox, streamLinesResponse } from '@/lib/ansi';
+import { ansi, link, drawBox, terminalLinesResponse } from '@/lib/ansi';
 
-export const runtime = 'edge';
+export const dynamic = 'force-static';
 
-export async function GET(request: Request) {
+export async function GET() {
   const { bold, reset, dim, white, gray } = ansi;
 
   const contactLines = [
@@ -22,5 +22,5 @@ export async function GET(request: Request) {
     `${dim}Hyperlinks are fully clickable directly in modern terminal shells (OSC 8).${reset}`
   ].join('\n').split('\n');
 
-  return streamLinesResponse(content, request);
+  return terminalLinesResponse(content);
 }
