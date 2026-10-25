@@ -13,8 +13,37 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     { url: canonicalOrigin, changeFrequency: "monthly", priority: 1 },
-    { url: `${canonicalOrigin}/editing`, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${canonicalOrigin}/linktree`, changeFrequency: "monthly", priority: 0.5 },
+    {
+      url: `${canonicalOrigin}/editing`,
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    {
+      url: `${canonicalOrigin}/linktree`,
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+    {
+      url: `${canonicalOrigin}/projects`,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${canonicalOrigin}/privacy-policy`,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
+      url: `${canonicalOrigin}/about`,
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    { url: `${canonicalOrigin}/now`, changeFrequency: "weekly", priority: 0.6 },
+    {
+      url: `${canonicalOrigin}/personal`,
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
     ...projectPages,
   ];
 }
