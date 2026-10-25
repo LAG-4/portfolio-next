@@ -73,11 +73,12 @@ export async function GitHubActivity() {
           <ArrowUpRight size={13} />
         </a>
       </div>
-      <div
+      <a
         className="contribution-scroll"
-        tabIndex={0}
-        role="region"
-        aria-label="GitHub contribution calendar. Scroll horizontally to see the full year on small screens."
+        href="https://github.com/LAG-4"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`Open LAG-4 on GitHub — ${summary}`}
       >
         <svg
           className="contribution-calendar"
@@ -115,7 +116,7 @@ export async function GitHubActivity() {
             </rect>
           ))}
         </svg>
-      </div>
+      </a>
       <div className="calendar-caption">
         <span>{summary}</span>
         <span

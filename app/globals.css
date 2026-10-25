@@ -799,6 +799,7 @@ body:has(dialog[open]) {
   margin-bottom: 14px;
 }
 .contribution-scroll {
+  display: block;
   direction: rtl;
   overflow-x: auto;
   scrollbar-width: thin;
