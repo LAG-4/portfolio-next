@@ -79,6 +79,26 @@ export const personalNotes: PersonalNotes = {
       note: "I’ve been watching a few of his videos lately.",
       url: "https://www.youtube.com/@TsodingDaily",
     },
+    {
+      name: "WestJett",
+      note: "Gaming and commentary.",
+      url: "https://www.youtube.com/@WestJett",
+    },
+    {
+      name: "Snazzy Labs",
+      note: "Tech videos and everyday gear.",
+      url: "https://www.youtube.com/@snazzy",
+    },
+    {
+      name: "Linus Tech Tips",
+      note: "PCs, hardware, and tech.",
+      url: "https://www.youtube.com/@LinusTechTips",
+    },
+    {
+      name: "Basically Homeless",
+      note: "Unusual builds and tech experiments.",
+      url: "https://www.youtube.com/@BasicallyHomeless",
+    },
   ],
   goals: [
     {
@@ -103,6 +123,12 @@ export const personalNotes: PersonalNotes = {
     },
   ],
   recommendations: [
+    {
+      name: "OpenCode",
+      category: "Tool",
+      note: "One of my coding tools. I use it with OpenCode Go, mostly with Muse Spark 1.3 Contributor.",
+      url: "https://opencode.ai/",
+    },
     {
       name: "T3 Code",
       category: "Tool",
